@@ -263,6 +263,11 @@ table.lb .crown{font-size:10px;margin-left:4px}
           </div>
         </div>
       </div>
+      <div class="card reveal" style="margin-bottom:20px">
+        <div class="card-h"><div><h3>The effort trendline</h3><div class="sub">9-session rolling average of METs — one line, the whole story. Higher = playing harder.</div></div></div>
+        <svg id="c-mtrend" viewBox="0 0 1000 240"></svg>
+        <div class="insight"><b>Read it left to right:</b> a year of effort in one stroke. 2025 wobbles between 6.5 and 8.5 — long, easy games. From March 2026 the line steps up and stays above 10. It never comes back down. That is the gear change.</div>
+      </div>
       <div class="grid2">
         <div class="card reveal">
           <div class="card-h"><div><h3>Every session, by effort</h3><div class="sub">METs per session · solid line = 9-session trend</div></div></div>
@@ -278,7 +283,7 @@ table.lb .crown{font-size:10px;margin-left:4px}
       <div class="card mt reveal">
         <div class="card-h"><div><h3>Effort vs temperature</h3><div class="sub">94 sessions with weather data (indoor + outdoor mix) · dashed = trend</div></div></div>
         <svg id="c-temp" viewBox="0 0 1000 220"></svg>
-        <div class="insight">The trend is <b>flat from 18°C to 31°C</b> — weather does not set the gear. Hard sessions cluster warm only because 2026 fell in hotter months. <span class="mono" style="font-size:11px">A MET = energy at rest; 10 METs = burning at 10× resting rate. Casual rally 5–7 · competitive doubles 8–10 · sprint singles 11+.</span></div>
+        <div class="insight"><b>The finding here is a null result, and that’s the point:</b> effort is identical at 18°C and at 31°C — the dashed trend line is flat. The orange/red dots (2026) sit higher only because you got fitter, not because those months were hotter. Practical takeaway: heat doesn’t cost you intensity, so there’s no reason to avoid summer slots or expect easier games in winter. <span class="mono" style="font-size:11px">MET = multiple of resting energy burn. Casual rally 5–7 · competitive doubles 8–10 · sprint singles 11+.</span></div>
       </div>
     </section>
 
@@ -1090,6 +1095,49 @@ document.querySelectorAll('#zseg button').forEach(b => b.addEventListener('click
     if(e.isIntersecting){ e.target.classList.add('in'); rev.unobserve(e.target); }
   }), {threshold: .12});
   document.querySelectorAll('.reveal').forEach(x => rev.observe(x));
+})();
+
+/* ---------- dedicated METs trendline ---------- */
+(function(){
+  const svg = document.getElementById('c-mtrend');
+  if(!svg) return;
+  const W = 1000, H = 240, padL = 44, padB = 34, padT = 22, padR = 110;
+  const tr = DATA.mets_trend;
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const yMin = 6, yMax = 11.5;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  [[7,'7 \u00B7 casual'],[9,'9 \u00B7 hard'],[11,'11 \u00B7 max']].forEach(([g,lab]) => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 8, Y(g) + 3, lab, {anchor:'end', size:9.5});
+  });
+  ['2025-07-01','2025-10-01','2026-01-01','2026-04-01'].forEach(d => {
+    txt(svg, tx(d), H - 18, moName(d.slice(0,7)), {size:9.5});
+    txt(svg, tx(d), H - 6, d.slice(0,4), {size:9.5, weight:600, fill: INK});
+  });
+  // phase divider
+  const xj = tx('2026-01-01');
+  el('line', {x1: xj, y1: padT - 6, x2: xj, y2: H - padB, stroke: LINE, 'stroke-dasharray':'3 5'}, svg);
+  txt(svg, xj - 10, padT + 2, '2025 \u00B7 long & easy', {anchor:'end', size:10, fill: COURT, weight:600});
+  txt(svg, xj + 10, padT + 2, '2026 \u00B7 shorter & harder', {anchor:'start', size:10, fill: HOT, weight:600});
+  // area + line
+  let p = '';
+  tr.forEach((q, i) => p += (i ? 'L' : 'M') + tx(q.d).toFixed(1) + ' ' + Y(q.v).toFixed(1) + ' ');
+  el('path', {d: p + `L ${tx(tr[tr.length-1].d)} ${Y(yMin)} L ${tx(tr[0].d)} ${Y(yMin)} Z`,
+    fill: css('--court-soft'), opacity: .8}, svg);
+  el('path', {d: p, fill:'none', stroke: COURT, 'stroke-width': 3.2,
+    'stroke-linecap':'round','stroke-linejoin':'round'}, svg);
+  tr.forEach(q => {
+    const c = el('circle', {cx: tx(q.d), cy: Y(q.v), r: 6, fill:'transparent'}, svg);
+    hover(c, `${q.d} \u00B7 trend ${q.v} METs`);
+  });
+  // endpoints
+  const a = tr[0], z = tr[tr.length-1];
+  el('circle', {cx: tx(a.d), cy: Y(a.v), r: 5, fill: COURT, stroke: PAPER, 'stroke-width': 1.5}, svg);
+  el('circle', {cx: tx(z.d), cy: Y(z.v), r: 5, fill: HOT, stroke: PAPER, 'stroke-width': 1.5}, svg);
+  txt(svg, tx(a.d) + 8, Y(a.v) - 12, 'start ' + a.v.toFixed(1), {anchor:'start', size:12, weight:600, fill: COURT});
+  txt(svg, tx(z.d) + 12, Y(z.v) + 4, 'now ' + z.v.toFixed(1), {anchor:'start', size:13, weight:600, fill: HOT});
+  txt(svg, tx(z.d) + 12, Y(z.v) + 18, '+' + Math.round((z.v/a.v - 1)*100) + '% vs start', {anchor:'start', size:10, fill: MUTED});
 })();
 
 </script>
