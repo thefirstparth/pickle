@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Court Time — Annual Pickleball Report 2025–26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFBF8; --ink:#161A17; --muted:#6E7570; --faint:#9AA09B; --line:#E5E1D6; --hairline:#ECE8DD;
+  --court:#1E6B5C; --court-soft:#E4EEE9; --night:#54719A; --night-soft:#E6EBF2;
+  --ball:#C08A12; --ball-soft:#F4ECDA; --hot:#A8492E; --z4:#BC7333;
+  --easy:#A9C7B9; --nodata:#CFCBC0;
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:'Spline Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans',-apple-system,sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.mono{font-family:var(--mono)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:inherit}
+
+/* ---------- running header ---------- */
+nav{position:sticky;top:0;z-index:40;background:rgba(252,251,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .in{max-width:1120px;margin:0 auto;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+nav .l{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+nav .l b{color:var(--ink);font-weight:600}
+nav .r{display:flex;gap:14px;overflow-x:auto}
+nav .r a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none;padding:3px 2px;flex-shrink:0}
+nav .r a:hover{color:var(--court)}
+
+/* ---------- cover ---------- */
+.cover{padding:74px 0 10px}
+.cover .topline{display:flex;justify-content:space-between;align-items:baseline;border-top:3px solid var(--ink);padding-top:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase}
+.cover .topline .a{color:var(--court);font-weight:600}
+.cover .topline .b{color:var(--muted)}
+h1{font-size:clamp(58px,9.5vw,124px);font-weight:700;letter-spacing:-.045em;line-height:.96;margin:34px 0 22px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--court)}
+.standfirst{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,24px);color:#3E4642;max-width:760px;line-height:1.45}
+.covermeta{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:46px 0 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.covermeta .m{padding:14px 18px 16px 0;border-right:1px solid var(--line)}
+.covermeta .m:last-child{border-right:none}
+.covermeta .k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.covermeta .v{font-size:14.5px;font-weight:600;margin-top:4px}
+@media(max-width:860px){.covermeta{grid-template-columns:1fr 1fr}.covermeta .m{border-bottom:1px solid var(--line)}}
+
+/* key figures band */
+.keyband{display:flex;flex-wrap:wrap;margin:0 0 8px;border-bottom:1px solid var(--ink)}
+.keyband .k{flex:1 1 160px;padding:26px 22px 24px 0;border-right:1px solid var(--line)}
+.keyband .k:last-child{border-right:none}
+.keyband .v{font-family:var(--mono);font-size:clamp(30px,3.6vw,44px);font-weight:600;letter-spacing:-.03em}
+.keyband .v small{font-size:.45em;color:var(--muted);font-weight:500}
+.keyband .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* contents */
+.contents{padding:64px 0 30px}
+.contents h2{font-size:13px;font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:22px}
+.toc{list-style:none;max-width:860px}
+.toc li{margin-bottom:2px}
+.toc a{display:flex;align-items:baseline;gap:14px;text-decoration:none;padding:11px 4px;border-bottom:1px solid var(--hairline)}
+.toc a:hover .t{color:var(--court)}
+.toc .n{font-family:var(--mono);font-size:12px;color:var(--court);font-weight:600;width:34px;flex-shrink:0}
+.toc .t{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.toc .leader{flex:1;border-bottom:1px dotted var(--faint);transform:translateY(-5px);margin:0 6px;min-width:30px}
+.toc .d{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--muted);text-align:right;max-width:330px}
+@media(max-width:760px){.toc .d{display:none}}
+
+/* executive summary */
+.exec{border-top:3px solid var(--ink);padding:26px 0 8px;margin-top:26px}
+.exec h2{font-size:13px;font-family:var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:20px}
+.exec .q{display:grid;grid-template-columns:300px 1fr;gap:26px;padding:16px 0;border-bottom:1px solid var(--hairline);align-items:baseline}
+.exec .q:last-child{border-bottom:none}
+.exec .question{font-weight:700;font-size:17px;letter-spacing:-.01em}
+.exec .question .qn{font-family:var(--mono);font-size:11px;color:var(--court);display:block;margin-bottom:4px;letter-spacing:.12em}
+.exec .answer{color:#3E4642;font-size:16px}
+.exec .answer b{color:var(--ink)}
+@media(max-width:760px){.exec .q{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- sections ---------- */
+section.ch{padding:88px 0 14px}
+.sec-rule{border-top:3px solid var(--ink)}
+.sec-head{display:grid;grid-template-columns:110px 1fr;gap:26px;padding-top:20px;align-items:start}
+.sec-no{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--court);letter-spacing:.1em;padding-top:14px}
+.sec-head h2{font-size:clamp(34px,4.6vw,54px);font-weight:700;letter-spacing:-.035em;line-height:1.05}
+.sec-stand{font-family:var(--serif);font-style:italic;font-size:19px;color:#3E4642;max-width:680px;margin-top:14px;line-height:1.5}
+.sec-stand b{font-family:'Instrument Sans';font-style:normal;font-weight:700;color:var(--ink);font-size:.92em}
+.facts{display:flex;gap:0;flex-wrap:wrap;margin:26px 0 6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts .f{font-family:var(--mono);font-size:12px;color:var(--muted);padding:10px 22px 10px 0;margin-right:22px;letter-spacing:.02em}
+.facts .f b{color:var(--ink);font-weight:600}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr;gap:8px}.sec-no{padding-top:0}}
+
+/* ---------- figures ---------- */
+.row{display:grid;grid-template-columns:repeat(12,1fr);gap:34px;align-items:start}
+.c12{grid-column:span 12}.c6{grid-column:span 6}.c8{grid-column:span 8}.c4{grid-column:span 4}
+@media(max-width:880px){.c6,.c8,.c4{grid-column:span 12}}
+.fig{margin:40px 0 6px}
+.fig-head{border-top:1px solid var(--ink);padding-top:10px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.fig-no{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--court);font-weight:600;white-space:nowrap}
+.fig-title{font-size:17.5px;font-weight:700;letter-spacing:-.01em;margin-top:6px}
+.fig-sub{font-size:13.5px;color:var(--muted);margin:2px 0 18px}
+.fig svg{width:100%;display:block;overflow:visible}
+.fig-note{margin-top:14px;padding-top:10px;border-top:1px dotted var(--faint);font-size:13.5px;color:var(--muted);line-height:1.55}
+.fig-note b{color:var(--ink)}
+.fig-note::before{content:'Reading — ';font-family:var(--serif);font-style:italic;color:var(--ink)}
+.fig-src{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--faint);margin-top:8px;text-transform:uppercase}
+
+/* margin note */
+.marginalia{font-family:var(--serif);font-style:italic;font-size:16.5px;line-height:1.55;color:#494F4B;border-left:2px solid var(--court);padding-left:18px;margin-top:74px}
+.marginalia b{font-family:'Instrument Sans';font-style:normal;font-weight:700;font-size:.9em;color:var(--ink)}
+.marginalia .src{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.1em;color:var(--faint);margin-top:12px;text-transform:uppercase}
+@media(max-width:880px){.marginalia{margin-top:10px}}
+
+/* big numeral spread */
+.spread{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin:44px 0 10px;padding:36px 0 30px;display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.spread .num{font-family:var(--mono);font-size:clamp(56px,9vw,110px);font-weight:600;letter-spacing:-.05em;line-height:.95;color:var(--ink)}
+.spread .num i{font-style:normal;color:var(--court)}
+.spread .cap{font-size:17px;color:#3E4642;max-width:520px}
+.spread .cap b{color:var(--ink)}
+.spread .cap .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--court);font-weight:600;display:block;margin-bottom:10px}
+@media(max-width:760px){.spread{grid-template-columns:1fr;gap:18px}}
+
+/* comparison table (two seasons) */
+.cmp{width:100%;border-collapse:collapse;margin:40px 0 4px}
+.cmp th{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;text-align:right;padding:12px 14px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);color:var(--muted)}
+.cmp th:first-child{text-align:left}
+.cmp th.h25{color:var(--court)}
+.cmp th.h26{color:var(--hot)}
+.cmp td{padding:13px 14px;border-bottom:1px solid var(--hairline);text-align:right;font-family:var(--mono);font-size:16px}
+.cmp td:first-child{text-align:left;font-family:'Instrument Sans';font-size:15px;font-weight:500}
+.cmp td .delta{font-size:12px;font-weight:600;margin-left:10px;color:var(--hot)}
+.cmp tr.hl td{background:var(--court-soft)}
+
+/* data table */
+table.data{width:100%;border-collapse:collapse;margin-top:24px}
+table.data th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:right;padding:10px 12px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+table.data th:first-child{text-align:left}
+table.data td{padding:11px 12px;border-bottom:1px solid var(--hairline);text-align:right;font-family:var(--mono);font-size:13.5px}
+table.data td:first-child{text-align:left;font-family:'Instrument Sans';font-weight:500;font-size:14px}
+table.data tr:last-child td{border-bottom:1px solid var(--line)}
+table.data .pill{display:inline-block;padding:2px 9px;border-radius:3px;font-size:11px;font-weight:600}
+
+/* stat trio */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);margin:40px 0 8px}
+.trio .s{padding:22px 24px 22px 0;border-right:1px solid var(--line)}
+.trio .s:last-child{border-right:none}
+.trio .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--court);font-weight:600}
+.trio .v{font-family:var(--mono);font-size:32px;font-weight:600;margin-top:10px;letter-spacing:-.02em}
+.trio .v span{font-size:15px;color:var(--muted)}
+.trio .l{font-size:13.5px;color:var(--muted);margin-top:6px}
+@media(max-width:760px){.trio{grid-template-columns:1fr}.trio .s{border-right:none;border-bottom:1px solid var(--hairline)}}
+
+/* footnote / verdict */
+.footnote{display:grid;grid-template-columns:110px 1fr;gap:26px;margin:42px 0 6px;padding-top:16px;border-top:1px solid var(--ink)}
+.footnote .fn{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--court);font-weight:600;padding-top:4px}
+.footnote .body{font-size:15px;color:#3E4642;max-width:780px}
+.footnote .body b{color:var(--ink)}
+.footnote .body .mono{font-size:12.5px;color:var(--muted)}
+@media(max-width:760px){.footnote{grid-template-columns:1fr;gap:8px}}
+
+.verdict{margin:46px 0 8px;border-top:3px solid var(--ink);padding-top:22px;display:grid;grid-template-columns:110px 1fr;gap:26px}
+.verdict .fn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--hot);font-weight:600;padding-top:5px}
+.verdict .body{font-size:17px;line-height:1.65;max-width:800px;color:#272D29}
+.verdict .body b{font-weight:700}
+.verdict .body em{font-family:var(--serif);font-style:italic;font-size:1.05em}
+@media(max-width:760px){.verdict{grid-template-columns:1fr;gap:8px}}
+
+/* colophon */
+.colophon{margin-top:96px;border-top:3px solid var(--ink);padding:30px 0 64px;display:grid;grid-template-columns:110px 1fr;gap:26px}
+.colophon .fn{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.colophon p{font-size:13.5px;color:var(--muted);max-width:780px;margin-bottom:12px}
+.colophon .sig{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--faint)}
+@media(max-width:760px){.colophon{grid-template-columns:1fr}}
+
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:12px;padding:7px 10px;border-radius:6px;opacity:0;transition:opacity .12s;z-index:50;white-space:nowrap}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip"></div>
+
+<nav><div class="in">
+  <span class="l"><b>Court Time</b> — Annual Report 2025–26</span>
+  <span class="r">
+    <a href="#s1">§01</a><a href="#s2">§02</a><a href="#s3">§03</a><a href="#s4">§04</a>
+    <a href="#s5">§05</a><a href="#s6">§06</a><a href="#s7">§07</a><a href="#s8">§08</a>
+  </span>
+</div></nav>
+
+<!-- ============ COVER ============ -->
+<div class="wrap cover">
+  <div class="topline"><span class="a">Annual Report · No. 01</span><span class="b">FY June 2025 — June 2026</span></div>
+  <h1>Court Time<br><em>a season, measured.</em></h1>
+  <p class="standfirst">One hundred and fifteen games of pickleball, recorded beat by beat from the wrist. What follows is the complete account of a playing year: where the hours went, how hard they were, and what they cost.</p>
+  <div class="covermeta">
+    <div class="m"><div class="k">Prepared for</div><div class="v">Parth Bhatia</div></div>
+    <div class="m"><div class="k">Source</div><div class="v">Apple Health export, 11 Jun 2026</div></div>
+    <div class="m"><div class="k">Period</div><div class="v">22 Jun 2025 — 11 Jun 2026</div></div>
+    <div class="m"><div class="k">Instrument</div><div class="v">Apple Watch SE2 · 52,912 HR samples</div></div>
+  </div>
+
+  <div class="fig" style="margin-top:54px">
+    <div class="fig-head"><div><span class="fig-no">FIG. 0.1</span><div class="fig-title">The season at a glance</div><div class="fig-sub">Each bar is one session — height is duration, colour is effort intensity · hover for detail</div></div></div>
+    <svg id="skyline" viewBox="0 0 1000 210"></svg>
+    <div class="fig-src">Source: 115 workout records · effort = avg METs · grey bars lack effort metadata</div>
+  </div>
+
+  <div class="keyband">
+    <div class="k"><div class="v">115</div><div class="l">Sessions</div></div>
+    <div class="k"><div class="v">159.6<small> h</small></div><div class="l">Court hours</div></div>
+    <div class="k"><div class="v">83,938</div><div class="l">Active kcal</div></div>
+    <div class="k"><div class="v">98</div><div class="l">Play days</div></div>
+    <div class="k"><div class="v">7<small> days</small></div><div class="l">Longest streak</div></div>
+  </div>
+
+  <div class="exec">
+    <h2>Executive summary</h2>
+    <div class="q"><div class="question"><span class="qn">Q.1</span>Am I playing harder now?</div><div class="answer"><b>Yes — 34% more effort per minute since January.</b> Time above 80% of max heart rate rose from 5% of play to 39%. The trend has not reverted.</div></div>
+    <div class="q"><div class="question"><span class="qn">Q.2</span>Am I playing more?</div><div class="answer">Less often than the Jul–Aug 2025 peak, but each session burns far more. May 2026 nearly matched Aug 2025's calories in eight fewer hours.</div></div>
+    <div class="q"><div class="question"><span class="qn">Q.3</span>Is it making me healthier?</div><div class="answer">In-game fitness, unambiguously. Recovery markers, not yet — <b>sleep is absorbing the gains</b>. Section 08 carries the finding and the recommendation.</div></div>
+  </div>
+
+  <div class="contents">
+    <h2>Contents</h2>
+    <ol class="toc">
+      <li><a href="#s1"><span class="n">§01</span><span class="t">The Calendar</span><span class="leader"></span><span class="d">96 days on court, one 65-day silence</span></a></li>
+      <li><a href="#s2"><span class="n">§02</span><span class="t">Volume</span><span class="leader"></span><span class="d">twin peaks, a winter crater, a rebuild</span></a></li>
+      <li><a href="#s3"><span class="n">§03</span><span class="t">The Intensity Shift</span><span class="leader"></span><span class="d">the year's headline: a permanent change of gear</span></a></li>
+      <li><a href="#s4"><span class="n">§04</span><span class="t">Heart Zones</span><span class="leader"></span><span class="d">where 49,959 heartbeats actually went</span></a></li>
+      <li><a href="#s5"><span class="n">§05</span><span class="t">The Clock</span><span class="leader"></span><span class="d">a twilight player with a dawn habit</span></a></li>
+      <li><a href="#s6"><span class="n">§06</span><span class="t">The Fuel</span><span class="leader"></span><span class="d">81,825 kilocalories, one rally at a time</span></a></li>
+      <li><a href="#s7"><span class="n">§07</span><span class="t">Share of Training</span><span class="leader"></span><span class="d">pickleball is the program, not the hobby</span></a></li>
+      <li><a href="#s8"><span class="n">§08</span><span class="t">What the Body Says</span><span class="leader"></span><span class="d">the honest audit, and one recommendation</span></a></li>
+    </ol>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- ============ §01 CALENDAR ============ -->
+<section class="ch" id="s1">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 01</span>
+    <div><h2>The Calendar</h2>
+    <p class="sec-stand">A full year of court time on one grid. The shape of the season is legible at arm's length: a dense monsoon wall, a <b>65-day winter silence</b>, and a disciplined spring rebuild.</p></div>
+  </div>
+  <div class="facts"><span class="f"><b>98</b> play days of 355</span><span class="f"><b>28%</b> of all days</span><span class="f">longest gap <b>Nov 14 — Jan 18</b></span><span class="f">longest streak <b>7 days</b></span></div>
+  <div class="fig">
+    <div class="fig-head"><div><span class="fig-no">FIG. 1.1</span><div class="fig-title">Every day of the year</div><div class="fig-sub">Columns are weeks, rows Mon–Sun · cell shade = minutes played · hover any cell</div></div></div>
+    <svg id="c-cal" viewBox="0 0 1000 170"></svg>
+    <div class="fig-note">The Jul–Aug 2025 block is the densest stretch: <b>48 sessions in 62 days</b>. The winter gap coincides exactly with the CeeVaa wind-down. The 2026 pattern is fewer but darker cells — longer sessions, harder play.</div>
+    <div class="fig-src">Source: workout start dates and durations, Apple Health</div>
+  </div>
+</section>
+
+<!-- ============ §02 VOLUME ============ -->
+<section class="ch" id="s2">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 02</span>
+    <div><h2>Volume</h2>
+    <p class="sec-stand">August 2025 and May 2026 are the twin peaks — <b>36.1 h</b> and <b>28.6 h</b> in a month. Between them sits the crater: <b>December 2025, zero sessions</b>, and barely any play from November to February.</p></div>
+  </div>
+  <div class="row">
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 2.1</span><div class="fig-title">Hours on court, by month</div><div class="fig-sub">Total playtime per calendar month</div></div></div>
+      <svg id="c-hours" viewBox="0 0 460 250"></svg>
+      <div class="fig-note">Two seasons in one year: <b>Aug 2025 (36.1 h)</b>, a three-month crater, then a steady rebuild to <b>May 2026 (28.6 h)</b>.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 2.2</span><div class="fig-title">Sessions per month</div><div class="fig-sub">Frequency, independent of length</div></div></div>
+      <svg id="c-sessions" viewBox="0 0 460 250"></svg>
+      <div class="fig-note"><b>Jul 2025: 27 sessions</b>, nearly daily. The 2026 rebuild runs at a steadier 11–19 per month, with longer, harder games doing the work.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 2.3</span><div class="fig-title">Weekly rhythm</div><div class="fig-sub">Hours per week across 33 playing weeks</div></div></div>
+      <svg id="c-weeks" viewBox="0 0 460 210"></svg>
+      <div class="fig-note">33 of 51 weeks had at least one game. Best week ever: <b>12.6 h in early May 2026</b> — beating anything from the 2025 peak.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 2.4</span><div class="fig-title">Average session length</div><div class="fig-sub">Minutes per session, monthly average</div></div></div>
+      <svg id="c-dur" viewBox="0 0 460 250"></svg>
+      <div class="fig-note">Sessions stretched from ~65 min in mid-2025 to <b>~100 min by September</b> and stayed long. The quick game disappeared from the repertoire.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ §03 INTENSITY ============ -->
+<section class="ch" id="s3">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 03</span>
+    <div><h2>The Intensity Shift</h2>
+    <p class="sec-stand">The headline of the year. Same sport, same player, two entirely different gears: <b>34% more effort per minute</b>, and an average session heart rate that jumped from 129 to 155 bpm.</p></div>
+  </div>
+
+  <table class="cmp">
+    <tr><th>The two seasons</th><th class="h25">Phase I — 2025 (73 sessions)</th><th class="h26">Phase II — 2026 (42 sessions)</th></tr>
+    <tr><td>Average intensity</td><td>7.6 METs</td><td>10.2 METs<span class="delta">+34%</span></td></tr>
+    <tr><td>Average session heart rate</td><td>129 bpm</td><td>155 bpm<span class="delta">+26</span></td></tr>
+    <tr><td>Average peak heart rate</td><td>158 bpm</td><td>184 bpm<span class="delta">+26</span></td></tr>
+    <tr><td>Burn rate</td><td>474 kcal/h</td><td>619 kcal/h<span class="delta">+31%</span></td></tr>
+  </table>
+  <div class="fig-src">Source: per-workout statistics, Apple Health · phases split at 1 Jan 2026</div>
+
+  <div class="row" style="margin-top:24px">
+    <div class="fig c8">
+      <div class="fig-head"><div><span class="fig-no">FIG. 3.1</span><div class="fig-title">Every session, by effort</div><div class="fig-sub">METs per session with 9-session rolling trend · hover any dot</div></div></div>
+      <svg id="c-mets" viewBox="0 0 460 260"></svg>
+      <div class="fig-note">The trendline is the answer to the question. It starts at <b>7.1</b>, never exceeds 9 in 2025, then jumps and holds <b>above 10 for all of 2026</b>. A permanent gear change, not a hot streak.</div>
+    </div>
+    <div class="c4">
+      <div class="marginalia">A <b>MET</b> — metabolic equivalent — is the body's idle. One MET is sitting still; brisk walking is about 3.5. A 10-MET session means burning energy at ten times resting rate, sustained for the whole game. The watch derives it from heart rate, weight and movement.<span class="src">Casual rally 5–7 · competitive doubles 8–10 · sprint singles 11+</span></div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 3.2</span><div class="fig-title">Heart rate, month by month</div><div class="fig-sub">Average and peak HR across sessions, bpm</div></div></div>
+      <svg id="c-hr" viewBox="0 0 460 260"></svg>
+      <div class="fig-note">Average session HR climbed from the <b>120s to the 150s–170s</b>; peaks now routinely touch 184+. Most of each game is spent in zone 4.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 3.3</span><div class="fig-title">Effort vs. temperature</div><div class="fig-sub">94 outdoor sessions, METs against air temperature at start</div></div></div>
+      <svg id="c-temp" viewBox="0 0 460 260"></svg>
+      <div class="fig-note">Flat from <b>18°C to 31°C</b>. Hard sessions cluster on the warm side only because 2026 fell in hotter months. Weather does not set the gear.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ §04 HEART ZONES ============ -->
+<section class="ch" id="s4">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 04</span>
+    <div><h2>Heart Zones</h2>
+    <p class="sec-stand">52,912 individual heart-rate readings from inside the sessions, sorted into five zones against a measured maximum of 203 bpm. This is where the intensity shift stops being a number and becomes physiology.</p></div>
+  </div>
+
+  <div class="spread">
+    <div class="num">5<i>%</i> → 39<i>%</i></div>
+    <div class="cap"><span class="k">The central finding</span>Share of court time spent at <b>80%+ of maximum heart rate</b> (zones 4 and 5). In 2025, hard efforts were rare spikes. In 2026, they are the default state of the game.</div>
+  </div>
+
+  <div class="row">
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 4.1</span><div class="fig-title">Where each phase lives</div><div class="fig-sub">Share of tracked time per zone · Z1 &lt;122 · Z2 ≤142 · Z3 ≤162 · Z4 ≤183 · Z5 &gt;183 bpm</div></div></div>
+      <svg id="c-zphase" viewBox="0 0 460 240"></svg>
+      <div class="fig-note">2025 was a <b>Z1–Z2 sport</b>: 71% of time under 142 bpm. 2026 inverted the pyramid — <b>nearly 70% of time now sits at Z3 or above</b>, with a Z5 presence that did not previously exist.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 4.2</span><div class="fig-title">Zone mix by month</div><div class="fig-sub">Share of tracked time · months under 1 h of HR data shown as dots</div></div></div>
+      <svg id="c-zmonth" viewBox="0 0 460 240"></svg>
+      <div class="fig-note">The orange and red take over from March 2026. <b>In May 2026, Z4 alone (26% of play) nearly matched the entire Z3-and-above share of 2025's hardest month (32%).</b></div>
+    </div>
+  </div>
+  <div class="footnote"><span class="fn">Note 4(a)</span><div class="body">Coverage: the watch recorded dense HR samples for <b>74.8 of 159.6 court hours</b>; sampling was sparser in mid-2025. Zone shares are computed within tracked time only, so the phase comparison is like-for-like.</div></div>
+</section>
+
+<!-- ============ §05 THE CLOCK ============ -->
+<section class="ch" id="s5">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 05</span>
+    <div><h2>The Clock</h2>
+    <p class="sec-stand">A twilight player with a dawn habit. <b>Eight in the evening is the hour</b> — 25 sessions begin there — but a 6–8 am block carries 19 more, and six games started after midnight.</p></div>
+  </div>
+  <div class="facts"><span class="f">prime slot <b>8–9 pm</b></span><span class="f">dawn block <b>19 sessions before 9 am</b></span><span class="f">after midnight <b>6 games</b></span><span class="f">biggest day <b>Friday · 30.3 h</b></span></div>
+  <div class="row">
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 5.1</span><div class="fig-title">When sessions start</div><div class="fig-sub">Count by start hour, 24-hour clock</div></div></div>
+      <svg id="c-clock" viewBox="0 0 460 250"></svg>
+      <div class="fig-note"><b>8–9 pm holds 25 of 115 sessions.</b> The dawn block is the second life; midday play barely exists.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 5.2</span><div class="fig-title">Hours by day of week</div><div class="fig-sub">Total hours across the year</div></div></div>
+      <svg id="c-dow" viewBox="0 0 460 250"></svg>
+      <div class="fig-note">The week builds to <b>Friday (30.3 h)</b>, then tapers. Monday and Sunday are the natural rest days — a sane recovery shape.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ §06 THE FUEL ============ -->
+<section class="ch" id="s6">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 06</span>
+    <div><h2>The Fuel</h2>
+    <p class="sec-stand">83,938 active kilocalories in a playing year — the energy content of roughly <b>10.9 kg of body fat</b>, burned one rally at a time. And the burn is accelerating: the same hour of court time now costs 619 kcal instead of 474.</p></div>
+  </div>
+  <div class="row">
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 6.1</span><div class="fig-title">Cumulative calories</div><div class="fig-sub">Running total across the season, kcal</div></div></div>
+      <svg id="c-cum" viewBox="0 0 460 250"></svg>
+      <div class="fig-note">Two steep ramps — <b>Jul–Sep 2025</b> (volume) and <b>Mar–Jun 2026</b> (intensity). The flat winter shelf cost roughly 12,000 kcal of missed burn.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 6.2</span><div class="fig-title">Burn rate per session</div><div class="fig-sub">kcal per hour with 9-session rolling trend</div></div></div>
+      <svg id="c-kcalh" viewBox="0 0 460 250"></svg>
+      <div class="fig-note">From the <b>low 400s to a sustained 600+</b> — about a third more energy expenditure extracted from every hour on court.</div>
+    </div>
+  </div>
+  <div class="fig">
+    <div class="fig-head"><div><span class="fig-no">TABLE 6.3</span><div class="fig-title">The eight biggest sessions</div><div class="fig-sub">Ranked by total active energy</div></div></div>
+    <table class="data" id="t-top"></table>
+    <div class="fig-note">Six of the eight biggest burns are from <b>2026</b>, despite far fewer 2026 sessions. The two 2025 entries (19 and 29 Aug, 129–148 min) got there on duration alone.</div>
+  </div>
+</section>
+
+<!-- ============ §07 SHARE OF TRAINING ============ -->
+<section class="ch" id="s7">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 07</span>
+    <div><h2>Share of Training</h2>
+    <p class="sec-stand">The same year also logged walks, swims, cycling, cricket and badminton. They are rounding errors. Pickleball is <b>84% of all workout hours</b> and 93% of all workout calories — not a hobby in the data, but the training program itself.</p></div>
+  </div>
+  <div class="fig">
+    <div class="fig-head"><div><span class="fig-no">FIG. 7.1</span><div class="fig-title">Share of the year's workout time</div><div class="fig-sub">All 175 logged workouts, Jun 2025 – Jun 2026</div></div></div>
+    <svg id="c-sports" viewBox="0 0 1000 305"></svg>
+    <div class="fig-note">Walking is the only meaningful second activity at <b>22.6 h</b>, most of it recovery-pace. Everything else combined is under eight hours. If pickleball stops, training stops — worth knowing about oneself.</div>
+    <div class="fig-src">Source: all workout records in period, grouped by activity type</div>
+  </div>
+</section>
+
+<!-- ============ §08 THE BODY ============ -->
+<section class="ch" id="s8">
+  <div class="sec-rule"></div>
+  <div class="sec-head"><span class="sec-no">§ 08</span>
+    <div><h2>What the Body Says</h2>
+    <p class="sec-stand">The honest audit. The game got harder; the recovery markers did not follow. Resting heart rate drifted from <b>58 to 66 bpm</b> across the year and HRV is flat. The data points at one suspect — and it is not the sport.</p></div>
+  </div>
+  <div class="row">
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 8.1</span><div class="fig-title">Resting heart rate</div><div class="fig-sub">Monthly average, bpm · lower is better</div></div></div>
+      <svg id="c-rhr" viewBox="0 0 460 240"></svg>
+      <div class="fig-note">RHR <b>improved to 57.6 during the Jul–Aug 2025 volume peak</b>, drifted up through the layoff, and has held in the mid-60s despite harder play. Volume helped it; intensity alone has not.</div>
+    </div>
+    <div class="fig c6">
+      <div class="fig-head"><div><span class="fig-no">FIG. 8.2</span><div class="fig-title">Heart rate variability</div><div class="fig-sub">Monthly average SDNN, ms · higher is better</div></div></div>
+      <svg id="c-hrv" viewBox="0 0 460 240"></svg>
+      <div class="fig-note">HRV peaked at <b>50 ms in the same Jul–Aug 2025 block</b> and has chopped between 39 and 47 since — no upward trend despite a fitter heart in-game. That points at recovery, not fitness.</div>
+    </div>
+  </div>
+  <div class="fig">
+    <div class="fig-head"><div><span class="fig-no">FIG. 8.3</span><div class="fig-title">Cardio fitness (VO₂max)</div><div class="fig-sub">All 47 readings since 2023, ml/kg/min · Apple estimates this only on outdoor walks and runs</div></div></div>
+    <svg id="c-vo2" viewBox="0 0 1000 220"></svg>
+    <div class="fig-note">The all-time best is <b>40.7 from Jul 2023</b>, in the running era. Within the pickleball era the <b>38.0 of Aug 2025</b> is the high-water mark. Current readings sit near 34 — but the instrument only updates on walks and runs, which barely happen now. The true ceiling is likely higher than charted.</div>
+  </div>
+  <div class="trio">
+    <div class="s"><div class="tag">Next-day HRV</div><div class="v">45.0 <span>vs 45.6</span></div><div class="l">after a pickleball day vs after rest — no damage, no boost</div></div>
+    <div class="s"><div class="tag">Next-day resting HR</div><div class="v">62.4 <span>vs 63.0</span></div><div class="l">slightly lower after playing — the heart likes the work</div></div>
+    <div class="s"><div class="tag">Sleep after playing</div><div class="v">5.3 h <span>vs 5.8</span></div><div class="l">half an hour less sleep on pickleball nights</div></div>
+  </div>
+  <div class="verdict">
+    <span class="fn">Finding</span>
+    <div class="body">The sessions themselves are clean: next-day recovery is identical to rest days and resting HR is marginally <em>better</em> after playing. The leak is <b>sleep</b>. The 8–11 pm games cost about thirty minutes each against a 5.5-hour baseline that has no buffer to give. The 2026 intensity is earned fitness, but it will only surface in HRV and resting HR once the nights stop paying for the evenings. The Jul–Aug 2025 block proves the upside is real — the one period where volume, RHR, HRV and VO₂max all moved together. <b>Recommendation: same gear, earlier games, in bed by 11:30.</b></div>
+  </div>
+
+  <div class="colophon">
+    <span class="fn">Colophon</span>
+    <div>
+      <p>Built from the Apple Health export of 11 June 2026: 115 pickleball workouts (duration, active energy, average METs, heart-rate summary, weather), 52,912 in-session heart-rate samples, and 700 days of daily metrics (resting HR, HRV SDNN, VO₂max, sleep). Heart-rate zones use a measured maximum of 203 bpm: Z1 &lt;60%, Z2 60–70%, Z3 70–80%, Z4 80–90%, Z5 90%+. Zone time is computed within HR-tracked minutes only (74.8 of 159.6 h). Sleep is attributed to the morning it ends. Next-day comparisons cover the full era — 92 pickleball days against 204 rest days with data.</p>
+      <p class="sig">COURT TIME · ANNUAL REPORT NO. 01 · SET IN INSTRUMENT SANS, INSTRUMENT SERIF &amp; SPLINE SANS MONO · CHARTS HAND-DRAWN IN SVG · ONE FILE, NO DEPENDENCIES</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+const DATA = {"sessions": [{"d": "2025-06-22", "dur": 61.9, "kcal": 363.2, "hr": 120.003, "hrmax": 140.0, "mets": 5.62, "h": 16.1, "dow": 6}, {"d": "2025-06-28", "dur": 52.7, "kcal": 345.9, "hr": 126.842, "hrmax": 154.0, "mets": 6.38, "h": 0.1, "dow": 5}, {"d": "2025-06-28", "dur": 94.0, "kcal": 572.8, "hr": 123.75, "hrmax": 162.0, "mets": 5.28, "h": 16.2, "dow": 5}, {"d": "2025-06-29", "dur": 64.1, "kcal": 516.9, "hr": 139.878, "hrmax": 202.0, "mets": 7.95, "h": 17.0, "dow": 6}, {"d": "2025-06-30", "dur": 79.9, "kcal": 796.7, "hr": 164.945, "hrmax": 194.0, "mets": 10.02, "h": 22.2, "dow": 0}, {"d": "2025-06-30", "dur": 28.3, "kcal": 268.0, "hr": 154.75, "hrmax": 176.0, "mets": 9.19, "h": 23.6, "dow": 0}, {"d": "2025-07-02", "dur": 55.8, "kcal": 258.2, "hr": 110.983, "hrmax": 134.0, "mets": 4.25, "h": 1.1, "dow": 2}, {"d": "2025-07-02", "dur": 53.8, "kcal": 489.8, "hr": 151.495, "hrmax": 179.0, "mets": 8.9, "h": 23.1, "dow": 2}, {"d": "2025-07-03", "dur": 59.0, "kcal": 326.7, "hr": 120.485, "hrmax": 144.0, "mets": 5.26, "h": 1.0, "dow": 3}, {"d": "2025-07-03", "dur": 71.5, "kcal": 451.9, "hr": 124.695, "hrmax": 159.0, "mets": 6.29, "h": 23.0, "dow": 3}, {"d": "2025-07-05", "dur": 115.1, "kcal": 751.8, "hr": 125.891, "hrmax": 163.0, "mets": 6.39, "h": 6.1, "dow": 5}, {"d": "2025-07-08", "dur": 82.6, "kcal": 647.8, "hr": 133.591, "hrmax": 194.0, "mets": 7.58, "h": 0.6, "dow": 1}, {"d": "2025-07-09", "dur": 60.4, "kcal": 522.8, "hr": 136.962, "hrmax": 169.0, "mets": 8.41, "h": 0.4, "dow": 2}, {"d": "2025-07-11", "dur": 59.6, "kcal": 252.6, "hr": 100.226, "hrmax": 126.0, "mets": 3.71, "h": 0.6, "dow": 4}, {"d": "2025-07-11", "dur": 45.9, "kcal": 260.2, "hr": 111.622, "hrmax": 143.0, "mets": 5.22, "h": 23.3, "dow": 4}, {"d": "2025-07-12", "dur": 56.8, "kcal": 642.8, "hr": 158.064, "hrmax": 189.0, "mets": 10.71, "h": 8.1, "dow": 5}, {"d": "2025-07-14", "dur": 1.4, "kcal": 5.6, "hr": 102.876, "hrmax": 112.0, "mets": null, "h": 21.6, "dow": 0}, {"d": "2025-07-14", "dur": 0.0, "kcal": 0.0, "hr": 0.0, "hrmax": 0.0, "mets": null, "h": 21.6, "dow": 0}, {"d": "2025-07-14", "dur": 73.9, "kcal": 758.8, "hr": 145.827, "hrmax": 179.0, "mets": null, "h": 21.6, "dow": 0}, {"d": "2025-07-14", "dur": 6.6, "kcal": 70.3, "hr": 149.507, "hrmax": 170.0, "mets": 10.24, "h": 23.1, "dow": 0}, {"d": "2025-07-15", "dur": 60.2, "kcal": 374.6, "hr": 117.856, "hrmax": 161.0, "mets": null, "h": 23.1, "dow": 1}, {"d": "2025-07-16", "dur": 59.6, "kcal": 573.4, "hr": 139.682, "hrmax": 167.0, "mets": null, "h": 22.5, "dow": 2}, {"d": "2025-07-17", "dur": 104.5, "kcal": 890.1, "hr": 131.211, "hrmax": 161.0, "mets": null, "h": 22.2, "dow": 3}, {"d": "2025-07-19", "dur": 90.3, "kcal": 682.0, "hr": 125.432, "hrmax": 157.0, "mets": null, "h": 6.3, "dow": 5}, {"d": "2025-07-19", "dur": 21.4, "kcal": 218.0, "hr": 145.067, "hrmax": 164.0, "mets": null, "h": 7.8, "dow": 5}, {"d": "2025-07-21", "dur": 66.1, "kcal": 641.5, "hr": 141.719, "hrmax": 183.0, "mets": null, "h": 22.2, "dow": 0}, {"d": "2025-07-22", "dur": 58.5, "kcal": 523.9, "hr": 136.051, "hrmax": 158.0, "mets": null, "h": 22.1, "dow": 1}, {"d": "2025-07-24", "dur": 68.5, "kcal": 741.3, "hr": 156.807, "hrmax": 180.0, "mets": null, "h": 22.0, "dow": 3}, {"d": "2025-07-26", "dur": 72.1, "kcal": 316.9, "hr": 106.14, "hrmax": 138.0, "mets": null, "h": 20.6, "dow": 5}, {"d": "2025-07-28", "dur": 46.9, "kcal": 284.6, "hr": 116.339, "hrmax": 160.0, "mets": null, "h": 22.5, "dow": 0}, {"d": "2025-07-29", "dur": 121.4, "kcal": 1063.4, "hr": 141.156, "hrmax": 174.0, "mets": 8.48, "h": 21.1, "dow": 1}, {"d": "2025-07-30", "dur": 129.6, "kcal": 1165.0, "hr": 140.3, "hrmax": 165.0, "mets": 8.96, "h": 20.1, "dow": 2}, {"d": "2025-07-31", "dur": 114.4, "kcal": 980.6, "hr": 133.546, "hrmax": 159.0, "mets": 8.54, "h": 20.4, "dow": 3}, {"d": "2025-08-01", "dur": 134.4, "kcal": 1042.8, "hr": 126.142, "hrmax": 145.0, "mets": 7.78, "h": 20.0, "dow": 4}, {"d": "2025-08-03", "dur": 122.7, "kcal": 1151.5, "hr": 136.694, "hrmax": 166.0, "mets": 9.24, "h": 19.1, "dow": 6}, {"d": "2025-08-04", "dur": 103.0, "kcal": 964.3, "hr": 134.927, "hrmax": 154.0, "mets": 9.17, "h": 20.1, "dow": 0}, {"d": "2025-08-05", "dur": 57.2, "kcal": 520.7, "hr": 132.166, "hrmax": 155.0, "mets": 9.03, "h": 20.1, "dow": 1}, {"d": "2025-08-05", "dur": 74.2, "kcal": 718.3, "hr": 136.727, "hrmax": 159.0, "mets": 9.55, "h": 21.1, "dow": 1}, {"d": "2025-08-06", "dur": 117.8, "kcal": 1110.5, "hr": 134.819, "hrmax": 159.0, "mets": 9.23, "h": 20.2, "dow": 2}, {"d": "2025-08-06", "dur": 56.7, "kcal": 509.7, "hr": 134.399, "hrmax": 157.0, "mets": 8.74, "h": 22.3, "dow": 2}, {"d": "2025-08-13", "dur": 72.8, "kcal": 604.4, "hr": 128.066, "hrmax": 153.0, "mets": 8.19, "h": 20.3, "dow": 2}, {"d": "2025-08-14", "dur": 51.9, "kcal": 301.8, "hr": 116.753, "hrmax": 142.0, "mets": 5.27, "h": 21.8, "dow": 3}, {"d": "2025-08-15", "dur": 142.0, "kcal": 1046.5, "hr": 123.564, "hrmax": 154.0, "mets": 7.05, "h": 8.2, "dow": 4}, {"d": "2025-08-16", "dur": 63.8, "kcal": 291.0, "hr": 104.132, "hrmax": 129.0, "mets": 4.43, "h": 22.7, "dow": 5}, {"d": "2025-08-17", "dur": 84.1, "kcal": 447.2, "hr": 110.868, "hrmax": 138.0, "mets": 5.29, "h": 9.0, "dow": 6}, {"d": "2025-08-19", "dur": 147.9, "kcal": 1412.7, "hr": 139.066, "hrmax": 167.0, "mets": 9.03, "h": 20.3, "dow": 1}, {"d": "2025-08-21", "dur": 104.9, "kcal": 742.3, "hr": 121.616, "hrmax": 154.0, "mets": 7.12, "h": 20.3, "dow": 3}, {"d": "2025-08-22", "dur": 136.1, "kcal": 1064.8, "hr": 125.951, "hrmax": 154.0, "mets": 8.05, "h": 20.1, "dow": 4}, {"d": "2025-08-23", "dur": 85.1, "kcal": 455.0, "hr": 115.023, "hrmax": 138.0, "mets": 5.25, "h": 8.1, "dow": 5}, {"d": "2025-08-24", "dur": 129.4, "kcal": 1044.7, "hr": 128.586, "hrmax": 167.0, "mets": 7.08, "h": 8.1, "dow": 6}, {"d": "2025-08-28", "dur": 147.2, "kcal": 1058.6, "hr": 122.108, "hrmax": 148.0, "mets": 7.14, "h": 19.8, "dow": 3}, {"d": "2025-08-29", "dur": 129.1, "kcal": 1194.8, "hr": 135.497, "hrmax": 162.0, "mets": 9.05, "h": 20.0, "dow": 4}, {"d": "2025-08-30", "dur": 135.2, "kcal": 1190.0, "hr": 133.067, "hrmax": 163.0, "mets": 8.55, "h": 8.1, "dow": 5}, {"d": "2025-08-31", "dur": 72.4, "kcal": 596.4, "hr": 127.653, "hrmax": 155.0, "mets": 8.07, "h": 9.1, "dow": 6}, {"d": "2025-09-02", "dur": 113.3, "kcal": 976.7, "hr": 133.553, "hrmax": 171.0, "mets": 8.47, "h": 20.1, "dow": 1}, {"d": "2025-09-03", "dur": 109.3, "kcal": 1001.3, "hr": 135.347, "hrmax": 181.0, "mets": 9.07, "h": 20.1, "dow": 2}, {"d": "2025-09-05", "dur": 131.1, "kcal": 1042.4, "hr": 126.664, "hrmax": 156.0, "mets": 7.89, "h": 20.2, "dow": 4}, {"d": "2025-09-15", "dur": 117.4, "kcal": 1154.2, "hr": 141.218, "hrmax": 167.0, "mets": 9.63, "h": 20.1, "dow": 0}, {"d": "2025-09-16", "dur": 104.9, "kcal": 1160.2, "hr": 151.694, "hrmax": 175.0, "mets": 10.74, "h": 20.1, "dow": 1}, {"d": "2025-09-18", "dur": 92.5, "kcal": 613.4, "hr": 119.514, "hrmax": 156.0, "mets": 6.58, "h": 20.1, "dow": 3}, {"d": "2025-09-30", "dur": 124.9, "kcal": 829.1, "hr": 130.527, "hrmax": 164.0, "mets": 6.68, "h": 20.0, "dow": 1}, {"d": "2025-10-03", "dur": 115.1, "kcal": 761.8, "hr": 120.745, "hrmax": 142.0, "mets": 6.43, "h": 20.1, "dow": 4}, {"d": "2025-10-03", "dur": 38.1, "kcal": 215.4, "hr": 114.549, "hrmax": 138.0, "mets": 5.36, "h": 22.1, "dow": 4}, {"d": "2025-10-04", "dur": 53.7, "kcal": 539.1, "hr": 145.157, "hrmax": 161.0, "mets": 9.86, "h": 9.2, "dow": 5}, {"d": "2025-10-05", "dur": 80.9, "kcal": 565.0, "hr": 121.99, "hrmax": 152.0, "mets": 6.8, "h": 9.1, "dow": 6}, {"d": "2025-10-06", "dur": 96.5, "kcal": 885.1, "hr": 136.319, "hrmax": 164.0, "mets": 8.91, "h": 18.9, "dow": 0}, {"d": "2025-10-08", "dur": 122.7, "kcal": 645.6, "hr": 114.439, "hrmax": 151.0, "mets": 5.33, "h": 20.2, "dow": 2}, {"d": "2025-10-09", "dur": 65.9, "kcal": 357.5, "hr": 104.134, "hrmax": 140.0, "mets": 5.12, "h": 23.0, "dow": 3}, {"d": "2025-10-22", "dur": 50.6, "kcal": 496.6, "hr": 148.401, "hrmax": 178.0, "mets": 9.62, "h": 20.5, "dow": 2}, {"d": "2025-10-24", "dur": 126.4, "kcal": 861.2, "hr": 130.411, "hrmax": 168.0, "mets": 6.88, "h": 19.1, "dow": 4}, {"d": "2025-11-13", "dur": 89.6, "kcal": 695.6, "hr": 145.211, "hrmax": 184.0, "mets": 8.2, "h": 19.1, "dow": 3}, {"d": "2025-11-14", "dur": 136.5, "kcal": 1015.5, "hr": 138.241, "hrmax": 178.0, "mets": 7.89, "h": 18.0, "dow": 4}, {"d": "2025-11-14", "dur": 78.0, "kcal": 573.0, "hr": 131.175, "hrmax": 182.0, "mets": 7.09, "h": 23.6, "dow": 4}, {"d": "2026-01-18", "dur": 56.6, "kcal": 613.7, "hr": 162.536, "hrmax": 183.0, "mets": 10.3, "h": 10.5, "dow": 6}, {"d": "2026-02-28", "dur": 92.7, "kcal": 1166.0, "hr": 173.792, "hrmax": 203.0, "mets": 12.55, "h": 19.2, "dow": 5}, {"d": "2026-03-07", "dur": 82.9, "kcal": 834.5, "hr": 158.641, "hrmax": 191.0, "mets": 10.08, "h": 19.1, "dow": 5}, {"d": "2026-03-14", "dur": 102.4, "kcal": 1101.8, "hr": 167.173, "hrmax": 195.0, "mets": 10.3, "h": 19.2, "dow": 5}, {"d": "2026-03-20", "dur": 128.9, "kcal": 1594.4, "hr": 173.323, "hrmax": 201.0, "mets": 11.57, "h": 19.1, "dow": 4}, {"d": "2026-03-31", "dur": 49.2, "kcal": 591.0, "hr": 175.297, "hrmax": 195.0, "mets": 11.28, "h": 7.3, "dow": 1}, {"d": "2026-04-01", "dur": 51.9, "kcal": 644.1, "hr": 173.552, "hrmax": 197.0, "mets": 11.6, "h": 7.2, "dow": 2}, {"d": "2026-04-07", "dur": 92.6, "kcal": 1062.7, "hr": 166.168, "hrmax": 191.0, "mets": 11.5, "h": 6.9, "dow": 1}, {"d": "2026-04-08", "dur": 56.1, "kcal": 675.1, "hr": 164.289, "hrmax": 181.0, "mets": 11.21, "h": 7.0, "dow": 2}, {"d": "2026-04-09", "dur": 74.1, "kcal": 862.6, "hr": 161.538, "hrmax": 195.0, "mets": 10.91, "h": 6.9, "dow": 3}, {"d": "2026-04-14", "dur": 36.5, "kcal": 451.8, "hr": 165.713, "hrmax": 190.0, "mets": 11.02, "h": 7.0, "dow": 1}, {"d": "2026-04-15", "dur": 51.1, "kcal": 506.7, "hr": 153.13, "hrmax": 191.0, "mets": 9.45, "h": 7.0, "dow": 2}, {"d": "2026-04-17", "dur": 42.3, "kcal": 495.8, "hr": 169.187, "hrmax": 192.0, "mets": 10.6, "h": 7.0, "dow": 4}, {"d": "2026-04-23", "dur": 77.6, "kcal": 564.2, "hr": 140.779, "hrmax": 180.0, "mets": 8.44, "h": 6.9, "dow": 3}, {"d": "2026-04-24", "dur": 81.1, "kcal": 673.6, "hr": 143.56, "hrmax": 179.0, "mets": 9.01, "h": 6.8, "dow": 4}, {"d": "2026-04-25", "dur": 73.7, "kcal": 662.1, "hr": 142.869, "hrmax": 174.0, "mets": 8.38, "h": 6.7, "dow": 5}, {"d": "2026-04-25", "dur": 12.0, "kcal": 138.4, "hr": 156.311, "hrmax": 172.0, "mets": 10.46, "h": 8.0, "dow": 5}, {"d": "2026-05-01", "dur": 117.9, "kcal": 1440.2, "hr": 157.848, "hrmax": 180.0, "mets": 9.86, "h": 19.1, "dow": 4}, {"d": "2026-05-02", "dur": 71.0, "kcal": 585.7, "hr": 129.419, "hrmax": 161.0, "mets": 7.89, "h": 7.0, "dow": 5}, {"d": "2026-05-04", "dur": 58.9, "kcal": 639.0, "hr": 162.266, "hrmax": 199.0, "mets": 10.87, "h": 6.8, "dow": 0}, {"d": "2026-05-04", "dur": 58.5, "kcal": 739.0, "hr": 161.909, "hrmax": 187.0, "mets": 11.35, "h": 18.5, "dow": 0}, {"d": "2026-05-05", "dur": 71.8, "kcal": 482.0, "hr": 123.811, "hrmax": 165.0, "mets": 7.2, "h": 6.9, "dow": 1}, {"d": "2026-05-06", "dur": 89.8, "kcal": 947.1, "hr": 151.506, "hrmax": 189.0, "mets": 10.53, "h": 6.8, "dow": 2}, {"d": "2026-05-07", "dur": 101.1, "kcal": 973.0, "hr": 138.016, "hrmax": 166.0, "mets": 9.19, "h": 18.6, "dow": 3}, {"d": "2026-05-08", "dur": 71.2, "kcal": 594.0, "hr": 140.815, "hrmax": 173.0, "mets": 9.75, "h": 6.2, "dow": 4}, {"d": "2026-05-09", "dur": 113.1, "kcal": 1033.8, "hr": 138.831, "hrmax": 186.0, "mets": 9.45, "h": 18.2, "dow": 5}, {"d": "2026-05-10", "dur": 82.2, "kcal": 775.9, "hr": 135.621, "hrmax": 169.0, "mets": 7.73, "h": 5.9, "dow": 6}, {"d": "2026-05-10", "dur": 107.3, "kcal": 1018.7, "hr": 144.957, "hrmax": 181.0, "mets": 9.88, "h": 18.6, "dow": 6}, {"d": "2026-05-14", "dur": 79.5, "kcal": 760.8, "hr": 153.017, "hrmax": 182.0, "mets": 10.49, "h": 19.2, "dow": 3}, {"d": "2026-05-14", "dur": 14.1, "kcal": 189.4, "hr": 170.278, "hrmax": 187.0, "mets": 12.01, "h": 20.7, "dow": 3}, {"d": "2026-05-15", "dur": 107.2, "kcal": 1127.6, "hr": 160.9, "hrmax": 194.0, "mets": 11.16, "h": 18.1, "dow": 4}, {"d": "2026-05-16", "dur": 98.3, "kcal": 1288.9, "hr": 172.185, "hrmax": 192.0, "mets": 11.56, "h": 18.1, "dow": 5}, {"d": "2026-05-20", "dur": 111.7, "kcal": 1229.2, "hr": 163.123, "hrmax": 186.0, "mets": 10.91, "h": 18.1, "dow": 2}, {"d": "2026-05-21", "dur": 141.0, "kcal": 1116.8, "hr": 144.038, "hrmax": 183.0, "mets": 8.76, "h": 20.0, "dow": 3}, {"d": "2026-05-24", "dur": 113.9, "kcal": 962.0, "hr": 133.835, "hrmax": 166.0, "mets": 8.69, "h": 10.2, "dow": 6}, {"d": "2026-05-25", "dur": 110.0, "kcal": 1213.8, "hr": 151.166, "hrmax": 175.0, "mets": 10.45, "h": 17.1, "dow": 0}, {"d": "2026-06-02", "dur": 38.1, "kcal": 504.4, "hr": 168.574, "hrmax": 189.0, "mets": 11.76, "h": 20.3, "dow": 1}, {"d": "2026-06-03", "dur": 111.7, "kcal": 1432.8, "hr": 171.699, "hrmax": 194.0, "mets": 12.07, "h": 17.6, "dow": 2}, {"d": "2026-06-04", "dur": 48.5, "kcal": 505.3, "hr": 145.462, "hrmax": 169.0, "mets": 9.56, "h": 21.0, "dow": 3}, {"d": "2026-06-09", "dur": 107.7, "kcal": 1012.7, "hr": 152.166, "hrmax": 186.0, "mets": 9.45, "h": 19.0, "dow": 1}, {"d": "2026-06-10", "dur": 117.3, "kcal": 992.4, "hr": 139.274, "hrmax": 176.0, "mets": 9.06, "h": 18.1, "dow": 2}, {"d": "2026-06-11", "dur": 118.5, "kcal": 1120.3, "hr": 152.839, "hrmax": 185.0, "mets": 9.83, "h": 18.0, "dow": 3}], "months": [{"m": "2025-06", "n": 6, "h": 6.3, "kcal": 2864, "hr": 138.4, "mets": 7.41, "dur": 63.5}, {"m": "2025-07", "n": 27, "h": 29.3, "kcal": 13895, "hr": 126.1, "mets": 7.35, "dur": 65.0}, {"m": "2025-08", "n": 21, "h": 36.1, "kcal": 17468, "hr": 127.0, "mets": 7.73, "dur": 103.2}, {"m": "2025-09", "n": 7, "h": 13.2, "kcal": 6777, "hr": 134.1, "mets": 8.44, "dur": 113.3}, {"m": "2025-10", "n": 9, "h": 12.5, "kcal": 5327, "hr": 126.2, "mets": 7.15, "dur": 83.3}, {"m": "2025-11", "n": 3, "h": 5.1, "kcal": 2284, "hr": 138.2, "mets": 7.73, "dur": 101.4}, {"m": "2025-12", "n": 0, "h": 0.0, "kcal": 0, "hr": null, "mets": null, "dur": null}, {"m": "2026-01", "n": 1, "h": 0.9, "kcal": 614, "hr": 162.5, "mets": 10.3, "dur": 56.6}, {"m": "2026-02", "n": 1, "h": 1.5, "kcal": 1166, "hr": 173.8, "mets": 12.55, "dur": 92.7}, {"m": "2026-03", "n": 4, "h": 6.1, "kcal": 4122, "hr": 168.6, "mets": 10.81, "dur": 90.9}, {"m": "2026-04", "n": 11, "h": 10.8, "kcal": 6737, "hr": 157.9, "mets": 10.23, "dur": 59.0}, {"m": "2026-05", "n": 19, "h": 28.6, "kcal": 17117, "hr": 149.1, "mets": 9.88, "dur": 90.4}, {"m": "2026-06", "n": 6, "h": 9.0, "kcal": 5568, "hr": 155.0, "mets": 10.29, "dur": 90.3}], "weeks": [{"w": "2025-06-16", "h": 1.0}, {"w": "2025-06-23", "h": 3.5}, {"w": "2025-06-30", "h": 7.7}, {"w": "2025-07-07", "h": 5.1}, {"w": "2025-07-14", "h": 7.0}, {"w": "2025-07-21", "h": 4.4}, {"w": "2025-07-28", "h": 11.2}, {"w": "2025-08-04", "h": 6.8}, {"w": "2025-08-11", "h": 6.9}, {"w": "2025-08-18", "h": 10.1}, {"w": "2025-08-25", "h": 8.1}, {"w": "2025-09-01", "h": 5.9}, {"w": "2025-09-15", "h": 5.2}, {"w": "2025-09-29", "h": 6.9}, {"w": "2025-10-06", "h": 4.8}, {"w": "2025-10-20", "h": 3.0}, {"w": "2025-11-10", "h": 5.1}, {"w": "2026-01-12", "h": 0.9}, {"w": "2026-02-23", "h": 1.5}, {"w": "2026-03-02", "h": 1.4}, {"w": "2026-03-09", "h": 1.7}, {"w": "2026-03-16", "h": 2.1}, {"w": "2026-03-30", "h": 1.7}, {"w": "2026-04-06", "h": 3.7}, {"w": "2026-04-13", "h": 2.2}, {"w": "2026-04-20", "h": 4.1}, {"w": "2026-04-27", "h": 3.1}, {"w": "2026-05-04", "h": 12.6}, {"w": "2026-05-11", "h": 5.0}, {"w": "2026-05-18", "h": 6.1}, {"w": "2026-05-25", "h": 1.8}, {"w": "2026-06-01", "h": 3.3}, {"w": "2026-06-08", "h": 5.7}], "health": [{"m": "2025-01", "rhr": 58.0, "hrv": 53.3, "sleep": 6.3}, {"m": "2025-02", "rhr": 61.8, "hrv": 46.0, "sleep": 4.9}, {"m": "2025-03", "rhr": 68.0, "hrv": 33.3, "sleep": null}, {"m": "2025-04", "rhr": 67.1, "hrv": 41.3, "sleep": 5.6}, {"m": "2025-05", "rhr": 66.7, "hrv": 45.9, "sleep": 5.8}, {"m": "2025-06", "rhr": 60.9, "hrv": 45.8, "sleep": 6.5}, {"m": "2025-07", "rhr": 58.0, "hrv": 49.2, "sleep": 5.4}, {"m": "2025-08", "rhr": 57.6, "hrv": 50.1, "sleep": 3.8}, {"m": "2025-09", "rhr": 60.6, "hrv": 41.8, "sleep": 5.3}, {"m": "2025-10", "rhr": 59.9, "hrv": 42.9, "sleep": 4.9}, {"m": "2025-11", "rhr": 60.9, "hrv": 50.7, "sleep": 6.2}, {"m": "2025-12", "rhr": 63.5, "hrv": 44.8, "sleep": 6.0}, {"m": "2026-01", "rhr": 63.6, "hrv": 46.1, "sleep": 6.2}, {"m": "2026-02", "rhr": 64.2, "hrv": 43.8, "sleep": 5.3}, {"m": "2026-03", "rhr": 64.7, "hrv": 41.5, "sleep": 5.7}, {"m": "2026-04", "rhr": 65.4, "hrv": 41.9, "sleep": 5.1}, {"m": "2026-05", "rhr": 66.2, "hrv": 46.7, "sleep": 6.3}, {"m": "2026-06", "rhr": 67.4, "hrv": 39.7, "sleep": 5.2}], "mets_trend": [{"d": "2025-06-22", "v": 7.05}, {"d": "2025-06-28", "v": 7.41}, {"d": "2025-06-28", "v": 6.96}, {"d": "2025-06-29", "v": 7.2}, {"d": "2025-06-30", "v": 6.98}, {"d": "2025-06-30", "v": 7.06}, {"d": "2025-07-02", "v": 7.06}, {"d": "2025-07-02", "v": 7.31}, {"d": "2025-07-03", "v": 7.37}, {"d": "2025-07-03", "v": 6.66}, {"d": "2025-07-05", "v": 6.22}, {"d": "2025-07-08", "v": 6.94}, {"d": "2025-07-09", "v": 7.09}, {"d": "2025-07-11", "v": 7.45}, {"d": "2025-07-11", "v": 7.74}, {"d": "2025-07-12", "v": 7.98}, {"d": "2025-07-14", "v": 8.01}, {"d": "2025-07-29", "v": 8.1}, {"d": "2025-07-30", "v": 8.7}, {"d": "2025-07-31", "v": 9.13}, {"d": "2025-08-01", "v": 9.0}, {"d": "2025-08-03", "v": 8.89}, {"d": "2025-08-04", "v": 8.92}, {"d": "2025-08-05", "v": 8.83}, {"d": "2025-08-05", "v": 8.47}, {"d": "2025-08-06", "v": 8.39}, {"d": "2025-08-06", "v": 7.85}, {"d": "2025-08-13", "v": 7.42}, {"d": "2025-08-14", "v": 7.42}, {"d": "2025-08-15", "v": 7.15}, {"d": "2025-08-16", "v": 7.02}, {"d": "2025-08-17", "v": 6.63}, {"d": "2025-08-19", "v": 6.51}, {"d": "2025-08-21", "v": 6.72}, {"d": "2025-08-22", "v": 6.94}, {"d": "2025-08-23", "v": 7.4}, {"d": "2025-08-24", "v": 7.7}, {"d": "2025-08-28", "v": 7.64}, {"d": "2025-08-29", "v": 7.86}, {"d": "2025-08-30", "v": 7.84}, {"d": "2025-08-31", "v": 8.33}, {"d": "2025-09-02", "v": 8.73}, {"d": "2025-09-03", "v": 8.67}, {"d": "2025-09-05", "v": 8.41}, {"d": "2025-09-15", "v": 8.17}, {"d": "2025-09-16", "v": 7.87}, {"d": "2025-09-18", "v": 8.03}, {"d": "2025-09-30", "v": 7.77}, {"d": "2025-10-03", "v": 7.89}, {"d": "2025-10-03", "v": 7.41}, {"d": "2025-10-04", "v": 6.79}, {"d": "2025-10-05", "v": 7.12}, {"d": "2025-10-06", "v": 7.15}, {"d": "2025-10-08", "v": 7.34}, {"d": "2025-10-09", "v": 7.62}, {"d": "2025-10-22", "v": 7.32}, {"d": "2025-10-24", "v": 7.7}, {"d": "2025-11-13", "v": 8.11}, {"d": "2025-11-14", "v": 8.64}, {"d": "2025-11-14", "v": 9.21}, {"d": "2026-01-18", "v": 9.43}, {"d": "2026-02-28", "v": 9.92}, {"d": "2026-03-07", "v": 10.3}, {"d": "2026-03-14", "v": 10.7}, {"d": "2026-03-20", "v": 11.15}, {"d": "2026-03-31", "v": 11.22}, {"d": "2026-04-01", "v": 11.05}, {"d": "2026-04-07", "v": 10.98}, {"d": "2026-04-08", "v": 11.02}, {"d": "2026-04-09", "v": 10.67}, {"d": "2026-04-14", "v": 10.42}, {"d": "2026-04-15", "v": 10.06}, {"d": "2026-04-17", "v": 9.94}, {"d": "2026-04-23", "v": 9.79}, {"d": "2026-04-24", "v": 9.46}, {"d": "2026-04-25", "v": 9.44}, {"d": "2026-04-25", "v": 9.65}, {"d": "2026-05-01", "v": 9.27}, {"d": "2026-05-02", "v": 9.51}, {"d": "2026-05-04", "v": 9.53}, {"d": "2026-05-04", "v": 9.68}, {"d": "2026-05-05", "v": 9.57}, {"d": "2026-05-06", "v": 9.33}, {"d": "2026-05-07", "v": 9.55}, {"d": "2026-05-08", "v": 9.51}, {"d": "2026-05-09", "v": 9.58}, {"d": "2026-05-10", "v": 10.02}, {"d": "2026-05-10", "v": 10.14}, {"d": "2026-05-14", "v": 10.33}, {"d": "2026-05-14", "v": 10.22}, {"d": "2026-05-15", "v": 10.13}, {"d": "2026-05-16", "v": 10.43}, {"d": "2026-05-20", "v": 10.64}, {"d": "2026-05-21", "v": 10.82}, {"d": "2026-05-24", "v": 10.55}, {"d": "2026-05-25", "v": 10.36}, {"d": "2026-06-02", "v": 10.08}, {"d": "2026-06-03", "v": 9.96}, {"d": "2026-06-04", "v": 10.11}, {"d": "2026-06-09", "v": 10.31}, {"d": "2026-06-10", "v": 10.29}, {"d": "2026-06-11", "v": 9.99}], "kcalh_trend": [{"d": "2025-06-22", "v": 439}, {"d": "2025-06-28", "v": 460}, {"d": "2025-06-28", "v": 434}, {"d": "2025-06-29", "v": 448}, {"d": "2025-06-30", "v": 435}, {"d": "2025-06-30", "v": 438}, {"d": "2025-07-02", "v": 438}, {"d": "2025-07-02", "v": 450}, {"d": "2025-07-03", "v": 454}, {"d": "2025-07-03", "v": 415}, {"d": "2025-07-05", "v": 390}, {"d": "2025-07-08", "v": 435}, {"d": "2025-07-09", "v": 442}, {"d": "2025-07-11", "v": 447}, {"d": "2025-07-11", "v": 469}, {"d": "2025-07-12", "v": 482}, {"d": "2025-07-14", "v": 480}, {"d": "2025-07-15", "v": 490}, {"d": "2025-07-16", "v": 527}, {"d": "2025-07-17", "v": 549}, {"d": "2025-07-19", "v": 545}, {"d": "2025-07-19", "v": 506}, {"d": "2025-07-21", "v": 505}, {"d": "2025-07-22", "v": 500}, {"d": "2025-07-24", "v": 503}, {"d": "2025-07-26", "v": 510}, {"d": "2025-07-28", "v": 493}, {"d": "2025-07-29", "v": 491}, {"d": "2025-07-30", "v": 494}, {"d": "2025-07-31", "v": 483}, {"d": "2025-08-01", "v": 518}, {"d": "2025-08-03", "v": 540}, {"d": "2025-08-04", "v": 542}, {"d": "2025-08-05", "v": 537}, {"d": "2025-08-05", "v": 519}, {"d": "2025-08-06", "v": 516}, {"d": "2025-08-06", "v": 484}, {"d": "2025-08-13", "v": 457}, {"d": "2025-08-14", "v": 460}, {"d": "2025-08-15", "v": 443}, {"d": "2025-08-16", "v": 432}, {"d": "2025-08-17", "v": 408}, {"d": "2025-08-19", "v": 406}, {"d": "2025-08-21", "v": 415}, {"d": "2025-08-22", "v": 428}, {"d": "2025-08-23", "v": 456}, {"d": "2025-08-24", "v": 476}, {"d": "2025-08-28", "v": 469}, {"d": "2025-08-29", "v": 483}, {"d": "2025-08-30", "v": 484}, {"d": "2025-08-31", "v": 514}, {"d": "2025-09-02", "v": 534}, {"d": "2025-09-03", "v": 530}, {"d": "2025-09-05", "v": 513}, {"d": "2025-09-15", "v": 498}, {"d": "2025-09-16", "v": 481}, {"d": "2025-09-18", "v": 491}, {"d": "2025-09-30", "v": 476}, {"d": "2025-10-03", "v": 484}, {"d": "2025-10-03", "v": 454}, {"d": "2025-10-04", "v": 416}, {"d": "2025-10-05", "v": 437}, {"d": "2025-10-06", "v": 438}, {"d": "2025-10-08", "v": 446}, {"d": "2025-10-09", "v": 458}, {"d": "2025-10-22", "v": 440}, {"d": "2025-10-24", "v": 466}, {"d": "2025-11-13", "v": 489}, {"d": "2025-11-14", "v": 521}, {"d": "2025-11-14", "v": 556}, {"d": "2026-01-18", "v": 573}, {"d": "2026-02-28", "v": 608}, {"d": "2026-03-07", "v": 639}, {"d": "2026-03-14", "v": 666}, {"d": "2026-03-20", "v": 697}, {"d": "2026-03-31", "v": 702}, {"d": "2026-04-01", "v": 701}, {"d": "2026-04-07", "v": 700}, {"d": "2026-04-08", "v": 706}, {"d": "2026-04-09", "v": 672}, {"d": "2026-04-14", "v": 648}, {"d": "2026-04-15", "v": 625}, {"d": "2026-04-17", "v": 630}, {"d": "2026-04-23", "v": 604}, {"d": "2026-04-24", "v": 599}, {"d": "2026-04-25", "v": 601}, {"d": "2026-05-01", "v": 580}, {"d": "2026-05-02", "v": 572}, {"d": "2026-05-04", "v": 587}, {"d": "2026-05-04", "v": 588}, {"d": "2026-05-05", "v": 589}, {"d": "2026-05-06", "v": 570}, {"d": "2026-05-07", "v": 579}, {"d": "2026-05-08", "v": 570}, {"d": "2026-05-09", "v": 556}, {"d": "2026-05-10", "v": 599}, {"d": "2026-05-10", "v": 602}, {"d": "2026-05-14", "v": 590}, {"d": "2026-05-15", "v": 591}, {"d": "2026-05-16", "v": 604}, {"d": "2026-05-20", "v": 629}, {"d": "2026-05-21", "v": 651}, {"d": "2026-05-24", "v": 657}, {"d": "2026-05-25", "v": 649}, {"d": "2026-06-02", "v": 618}, {"d": "2026-06-03", "v": 608}, {"d": "2026-06-04", "v": 625}, {"d": "2026-06-09", "v": 641}, {"d": "2026-06-10", "v": 638}, {"d": "2026-06-11", "v": 607}], "zones": [{"d": "2025-06-22", "z": [0.6, 0.8, 0.0, 0.0, 0.0]}, {"d": "2025-06-28", "z": [0.1, 1.0, 0.0, 0.0, 0.0]}, {"d": "2025-06-28", "z": [1.1, 0.8, 0.2, 0.0, 0.0]}, {"d": "2025-06-29", "z": [0.0, 0.8, 0.4, 0.0, 0.0]}, {"d": "2025-06-30", "z": [0.0, 0.0, 0.8, 0.9, 0.0]}, {"d": "2025-06-30", "z": [0.0, 0.0, 0.6, 0.0, 0.0]}, {"d": "2025-07-02", "z": [1.4, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-07-02", "z": [0.0, 0.2, 0.6, 0.5, 0.0]}, {"d": "2025-07-03", "z": [0.9, 0.5, 0.0, 0.0, 0.0]}, {"d": "2025-07-03", "z": [0.6, 1.0, 0.0, 0.0, 0.0]}, {"d": "2025-07-05", "z": [0.8, 1.6, 0.2, 0.0, 0.0]}, {"d": "2025-07-08", "z": [0.5, 0.8, 0.2, 0.1, 0.0]}, {"d": "2025-07-09", "z": [0.2, 0.2, 0.6, 0.0, 0.0]}, {"d": "2025-07-11", "z": [1.1, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-07-11", "z": [0.6, 0.2, 0.0, 0.0, 0.0]}, {"d": "2025-07-12", "z": [0.0, 0.0, 0.8, 0.4, 0.0]}, {"d": "2025-07-14", "z": [1.4, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-07-14", "z": [0, 0, 0, 0, 0]}, {"d": "2025-07-14", "z": [1.1, 25.5, 41.2, 6.2, 0.0]}, {"d": "2025-07-14", "z": [0.0, 0.0, 0.1, 0.0, 0.0]}, {"d": "2025-07-15", "z": [39.8, 12.2, 8.1, 0.0, 0.0]}, {"d": "2025-07-16", "z": [4.2, 31.7, 22.4, 1.3, 0.0]}, {"d": "2025-07-17", "z": [19.7, 68.1, 16.6, 0.0, 0.0]}, {"d": "2025-07-19", "z": [35.3, 46.9, 8.1, 0.0, 0.0]}, {"d": "2025-07-19", "z": [0.0, 7.4, 13.7, 0.2, 0.0]}, {"d": "2025-07-21", "z": [5.5, 34.6, 13.6, 12.3, 0.1]}, {"d": "2025-07-22", "z": [6.8, 32.7, 19.0, 0.0, 0.0]}, {"d": "2025-07-24", "z": [0.6, 8.5, 36.8, 22.6, 0.0]}, {"d": "2025-07-26", "z": [68.8, 3.3, 0.0, 0.0, 0.0]}, {"d": "2025-07-28", "z": [29.9, 8.0, 9.0, 0.0, 0.0]}, {"d": "2025-07-29", "z": [0.2, 1.0, 1.1, 0.0, 0.0]}, {"d": "2025-07-30", "z": [0.0, 1.2, 1.6, 0.0, 0.0]}, {"d": "2025-07-31", "z": [0.0, 2.1, 0.2, 0.0, 0.0]}, {"d": "2025-08-01", "z": [0.5, 2.4, 0.0, 0.0, 0.0]}, {"d": "2025-08-03", "z": [0.2, 1.2, 0.9, 0.0, 0.0]}, {"d": "2025-08-04", "z": [3.0, 2.0, 0.0, 0.0, 0.0]}, {"d": "2025-08-05", "z": [0.0, 1.2, 0.1, 0.0, 0.0]}, {"d": "2025-08-05", "z": [0.0, 1.1, 0.2, 0.0, 0.0]}, {"d": "2025-08-06", "z": [0.2, 1.6, 0.5, 0.0, 0.0]}, {"d": "2025-08-06", "z": [0.2, 0.5, 0.6, 0.0, 0.0]}, {"d": "2025-08-13", "z": [0.4, 1.2, 0.0, 0.0, 0.0]}, {"d": "2025-08-14", "z": [0.9, 0.2, 0.0, 0.0, 0.0]}, {"d": "2025-08-15", "z": [1.0, 1.6, 0.0, 0.0, 0.0]}, {"d": "2025-08-16", "z": [1.4, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-08-17", "z": [1.9, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-08-19", "z": [2.4, 7.7, 2.1, 0.0, 0.0]}, {"d": "2025-08-21", "z": [1.4, 1.2, 0.0, 0.0, 0.0]}, {"d": "2025-08-22", "z": [0.8, 2.1, 0.0, 0.0, 0.0]}, {"d": "2025-08-23", "z": [1.5, 0.4, 0.0, 0.0, 0.0]}, {"d": "2025-08-24", "z": [18.8, 2.3, 0.9, 0.0, 0.0]}, {"d": "2025-08-28", "z": [1.5, 1.4, 0.0, 0.0, 0.0]}, {"d": "2025-08-29", "z": [1.5, 1.1, 1.0, 0.0, 0.0]}, {"d": "2025-08-30", "z": [0.5, 1.0, 1.4, 0.0, 0.0]}, {"d": "2025-08-31", "z": [0.5, 1.3, 0.0, 0.0, 0.0]}, {"d": "2025-09-02", "z": [0.8, 0.8, 1.1, 0.0, 0.0]}, {"d": "2025-09-03", "z": [0.2, 1.9, 0.2, 0.0, 0.0]}, {"d": "2025-09-05", "z": [0.8, 1.9, 0.0, 0.0, 0.0]}, {"d": "2025-09-15", "z": [0.2, 0.8, 1.4, 0.0, 0.0]}, {"d": "2025-09-16", "z": [0.0, 0.0, 2.4, 0.0, 0.0]}, {"d": "2025-09-18", "z": [1.1, 0.8, 0.0, 0.0, 0.0]}, {"d": "2025-09-30", "z": [1.0, 1.0, 0.9, 0.0, 0.0]}, {"d": "2025-10-03", "z": [1.4, 1.0, 0.0, 0.0, 0.0]}, {"d": "2025-10-03", "z": [0.6, 0.0, 0.0, 0.0, 0.0]}, {"d": "2025-10-04", "z": [0.0, 0.8, 1.2, 0.0, 0.0]}, {"d": "2025-10-05", "z": [0.5, 1.1, 0.0, 0.0, 0.0]}, {"d": "2025-10-06", "z": [20.5, 1.6, 0.8, 0.0, 0.0]}, {"d": "2025-10-08", "z": [2.4, 0.2, 0.0, 0.0, 0.0]}, {"d": "2025-10-09", "z": [1.4, 0.4, 0.0, 0.0, 0.0]}, {"d": "2025-10-22", "z": [0.0, 0.2, 0.6, 0.0, 0.0]}, {"d": "2025-10-24", "z": [0.8, 1.6, 0.6, 0.0, 0.0]}, {"d": "2025-11-13", "z": [0.4, 3.8, 1.9, 0.2, 0.0]}, {"d": "2025-11-14", "z": [0.8, 0.5, 1.6, 0.0, 0.0]}, {"d": "2025-11-14", "z": [0.2, 1.0, 0.4, 0.0, 0.0]}, {"d": "2026-01-18", "z": [0.1, 0.0, 0.5, 0.6, 0.0]}, {"d": "2026-02-28", "z": [0.0, 8.1, 16.6, 61.2, 19.3]}, {"d": "2026-03-07", "z": [0.0, 13.3, 33.8, 33.2, 2.8]}, {"d": "2026-03-14", "z": [3.8, 16.1, 16.4, 51.7, 21.6]}, {"d": "2026-03-20", "z": [0.3, 3.7, 17.6, 81.6, 32.1]}, {"d": "2026-03-31", "z": [0.2, 1.7, 5.2, 26.1, 16.0]}, {"d": "2026-04-01", "z": [0.0, 0.0, 5.7, 41.5, 4.8]}, {"d": "2026-04-07", "z": [0.6, 3.7, 26.1, 56.5, 8.0]}, {"d": "2026-04-08", "z": [0.9, 5.5, 13.4, 39.2, 0.0]}, {"d": "2026-04-09", "z": [4.3, 10.7, 19.0, 28.5, 11.6]}, {"d": "2026-04-14", "z": [1.4, 3.0, 6.8, 25.5, 1.6]}, {"d": "2026-04-15", "z": [7.6, 15.5, 12.8, 22.7, 2.7]}, {"d": "2026-04-17", "z": [0.5, 5.4, 11.6, 24.8, 7.8]}, {"d": "2026-04-23", "z": [9.3, 33.6, 29.1, 6.5, 0.0]}, {"d": "2026-04-24", "z": [10.2, 25.4, 35.9, 9.9, 0.0]}, {"d": "2026-04-25", "z": [12.4, 20.2, 39.5, 6.6, 0.0]}, {"d": "2026-04-25", "z": [0.0, 1.4, 6.8, 3.9, 0.0]}, {"d": "2026-05-01", "z": [0.7, 23.5, 65.1, 44.8, 0.0]}, {"d": "2026-05-02", "z": [15.8, 48.1, 9.9, 0.0, 0.0]}, {"d": "2026-05-04", "z": [5.9, 7.3, 10.4, 29.6, 9.0]}, {"d": "2026-05-04", "z": [0.0, 3.3, 25.0, 30.2, 0.3]}, {"d": "2026-05-05", "z": [30.1, 35.7, 6.9, 0.3, 0.0]}, {"d": "2026-05-06", "z": [5.9, 28.1, 28.0, 28.8, 1.8]}, {"d": "2026-05-07", "z": [23.6, 50.8, 42.8, 1.0, 0.0]}, {"d": "2026-05-08", "z": [12.8, 23.3, 26.5, 8.8, 0.0]}, {"d": "2026-05-09", "z": [28.6, 28.8, 42.9, 12.6, 0.4]}, {"d": "2026-05-10", "z": [21.0, 57.4, 17.8, 0.6, 0.0]}, {"d": "2026-05-10", "z": [6.8, 36.4, 57.0, 8.7, 0.0]}, {"d": "2026-05-14", "z": [9.0, 21.3, 25.0, 33.5, 0.0]}, {"d": "2026-05-14", "z": [0.0, 0.0, 2.1, 11.7, 0.5]}, {"d": "2026-05-15", "z": [1.5, 17.5, 34.4, 56.2, 4.9]}, {"d": "2026-05-16", "z": [0.0, 2.2, 17.6, 79.2, 11.5]}, {"d": "2026-05-20", "z": [0.2, 16.5, 28.7, 76.3, 1.2]}, {"d": "2026-05-21", "z": [47.7, 23.9, 41.1, 45.4, 0.2]}, {"d": "2026-05-24", "z": [28.1, 31.5, 56.8, 0.9, 0.0]}, {"d": "2026-05-25", "z": [4.6, 19.4, 74.9, 16.9, 0.0]}, {"d": "2026-06-02", "z": [0.0, 0.8, 9.5, 30.3, 1.2]}, {"d": "2026-06-03", "z": [0.4, 5.4, 17.3, 75.7, 22.4]}, {"d": "2026-06-04", "z": [0.3, 16.7, 30.8, 1.0, 0.0]}, {"d": "2026-06-09", "z": [21.3, 21.6, 35.1, 45.1, 0.4]}, {"d": "2026-06-10", "z": [24.3, 35.0, 57.7, 6.2, 0.0]}, {"d": "2026-06-11", "z": [16.8, 17.3, 34.2, 53.7, 1.2]}], "zone_months": [{"m": "2025-06", "z": [2, 3, 2, 1, 0]}, {"m": "2025-07", "z": [219, 288, 194, 44, 0]}, {"m": "2025-08", "z": [39, 32, 8, 0, 0]}, {"m": "2025-09", "z": [4, 7, 6, 0, 0]}, {"m": "2025-10", "z": [28, 7, 3, 0, 0]}, {"m": "2025-11", "z": [1, 5, 4, 0, 0]}, {"m": "2026-01", "z": [0, 0, 0, 1, 0]}, {"m": "2026-02", "z": [0, 8, 17, 61, 19]}, {"m": "2026-03", "z": [4, 35, 73, 193, 72]}, {"m": "2026-04", "z": [47, 124, 207, 266, 36]}, {"m": "2026-05", "z": [242, 475, 613, 485, 30]}, {"m": "2026-06", "z": [63, 97, 185, 212, 25]}], "zone_phase": {"p25": [32.7, 38.2, 24.2, 5.0, 0.0], "p26": [9.9, 20.6, 30.5, 33.9, 5.1], "h25": 14.9, "h26": 59.9}, "sports": [{"s": "Pickleball", "n": 115, "h": 159.6, "kcal": 83939}, {"s": "Walking", "n": 49, "h": 22.6, "kcal": 4114}, {"s": "Cricket", "n": 1, "h": 3.0, "kcal": 1253}, {"s": "Cycling", "n": 3, "h": 1.3, "kcal": 252}, {"s": "Other", "n": 3, "h": 1.2, "kcal": 360}, {"s": "Swimming", "n": 2, "h": 0.8, "kcal": 94}, {"s": "Badminton", "n": 1, "h": 0.7, "kcal": 194}, {"s": "Elliptical", "n": 1, "h": 0.1, "kcal": 19}], "calendar": [{"d": "2025-06-22", "min": 62}, {"d": "2025-06-28", "min": 147}, {"d": "2025-06-29", "min": 64}, {"d": "2025-06-30", "min": 108}, {"d": "2025-07-02", "min": 110}, {"d": "2025-07-03", "min": 130}, {"d": "2025-07-05", "min": 115}, {"d": "2025-07-08", "min": 83}, {"d": "2025-07-09", "min": 60}, {"d": "2025-07-11", "min": 106}, {"d": "2025-07-12", "min": 57}, {"d": "2025-07-14", "min": 82}, {"d": "2025-07-15", "min": 60}, {"d": "2025-07-16", "min": 60}, {"d": "2025-07-17", "min": 104}, {"d": "2025-07-19", "min": 112}, {"d": "2025-07-21", "min": 66}, {"d": "2025-07-22", "min": 58}, {"d": "2025-07-24", "min": 68}, {"d": "2025-07-26", "min": 72}, {"d": "2025-07-28", "min": 47}, {"d": "2025-07-29", "min": 121}, {"d": "2025-07-30", "min": 130}, {"d": "2025-07-31", "min": 114}, {"d": "2025-08-01", "min": 134}, {"d": "2025-08-03", "min": 123}, {"d": "2025-08-04", "min": 103}, {"d": "2025-08-05", "min": 131}, {"d": "2025-08-06", "min": 174}, {"d": "2025-08-13", "min": 73}, {"d": "2025-08-14", "min": 52}, {"d": "2025-08-15", "min": 142}, {"d": "2025-08-16", "min": 64}, {"d": "2025-08-17", "min": 84}, {"d": "2025-08-19", "min": 148}, {"d": "2025-08-21", "min": 105}, {"d": "2025-08-22", "min": 136}, {"d": "2025-08-23", "min": 85}, {"d": "2025-08-24", "min": 129}, {"d": "2025-08-28", "min": 147}, {"d": "2025-08-29", "min": 129}, {"d": "2025-08-30", "min": 135}, {"d": "2025-08-31", "min": 72}, {"d": "2025-09-02", "min": 113}, {"d": "2025-09-03", "min": 109}, {"d": "2025-09-05", "min": 131}, {"d": "2025-09-15", "min": 117}, {"d": "2025-09-16", "min": 105}, {"d": "2025-09-18", "min": 92}, {"d": "2025-09-30", "min": 125}, {"d": "2025-10-03", "min": 153}, {"d": "2025-10-04", "min": 54}, {"d": "2025-10-05", "min": 81}, {"d": "2025-10-06", "min": 96}, {"d": "2025-10-08", "min": 123}, {"d": "2025-10-09", "min": 66}, {"d": "2025-10-22", "min": 51}, {"d": "2025-10-24", "min": 126}, {"d": "2025-11-13", "min": 90}, {"d": "2025-11-14", "min": 214}, {"d": "2026-01-18", "min": 57}, {"d": "2026-02-28", "min": 93}, {"d": "2026-03-07", "min": 83}, {"d": "2026-03-14", "min": 102}, {"d": "2026-03-20", "min": 129}, {"d": "2026-03-31", "min": 49}, {"d": "2026-04-01", "min": 52}, {"d": "2026-04-07", "min": 93}, {"d": "2026-04-08", "min": 56}, {"d": "2026-04-09", "min": 74}, {"d": "2026-04-14", "min": 36}, {"d": "2026-04-15", "min": 51}, {"d": "2026-04-17", "min": 42}, {"d": "2026-04-23", "min": 78}, {"d": "2026-04-24", "min": 81}, {"d": "2026-04-25", "min": 86}, {"d": "2026-05-01", "min": 118}, {"d": "2026-05-02", "min": 71}, {"d": "2026-05-04", "min": 117}, {"d": "2026-05-05", "min": 72}, {"d": "2026-05-06", "min": 90}, {"d": "2026-05-07", "min": 101}, {"d": "2026-05-08", "min": 71}, {"d": "2026-05-09", "min": 113}, {"d": "2026-05-10", "min": 190}, {"d": "2026-05-14", "min": 94}, {"d": "2026-05-15", "min": 107}, {"d": "2026-05-16", "min": 98}, {"d": "2026-05-20", "min": 112}, {"d": "2026-05-21", "min": 141}, {"d": "2026-05-24", "min": 114}, {"d": "2026-05-25", "min": 110}, {"d": "2026-06-02", "min": 38}, {"d": "2026-06-03", "min": 112}, {"d": "2026-06-04", "min": 48}, {"d": "2026-06-09", "min": 108}, {"d": "2026-06-10", "min": 117}, {"d": "2026-06-11", "min": 118}], "cum_kcal": [{"d": "2025-06-22", "v": 363}, {"d": "2025-06-28", "v": 709}, {"d": "2025-06-28", "v": 1282}, {"d": "2025-06-29", "v": 1799}, {"d": "2025-06-30", "v": 2596}, {"d": "2025-06-30", "v": 2864}, {"d": "2025-07-02", "v": 3122}, {"d": "2025-07-02", "v": 3612}, {"d": "2025-07-03", "v": 3938}, {"d": "2025-07-03", "v": 4390}, {"d": "2025-07-05", "v": 5142}, {"d": "2025-07-08", "v": 5790}, {"d": "2025-07-09", "v": 6312}, {"d": "2025-07-11", "v": 6565}, {"d": "2025-07-11", "v": 6825}, {"d": "2025-07-12", "v": 7468}, {"d": "2025-07-14", "v": 7474}, {"d": "2025-07-14", "v": 7474}, {"d": "2025-07-14", "v": 8232}, {"d": "2025-07-14", "v": 8303}, {"d": "2025-07-15", "v": 8677}, {"d": "2025-07-16", "v": 9251}, {"d": "2025-07-17", "v": 10141}, {"d": "2025-07-19", "v": 10823}, {"d": "2025-07-19", "v": 11041}, {"d": "2025-07-21", "v": 11682}, {"d": "2025-07-22", "v": 12206}, {"d": "2025-07-24", "v": 12948}, {"d": "2025-07-26", "v": 13264}, {"d": "2025-07-28", "v": 13549}, {"d": "2025-07-29", "v": 14612}, {"d": "2025-07-30", "v": 15777}, {"d": "2025-07-31", "v": 16758}, {"d": "2025-08-01", "v": 17801}, {"d": "2025-08-03", "v": 18952}, {"d": "2025-08-04", "v": 19917}, {"d": "2025-08-05", "v": 20437}, {"d": "2025-08-05", "v": 21156}, {"d": "2025-08-06", "v": 22266}, {"d": "2025-08-06", "v": 22776}, {"d": "2025-08-13", "v": 23380}, {"d": "2025-08-14", "v": 23682}, {"d": "2025-08-15", "v": 24729}, {"d": "2025-08-16", "v": 25020}, {"d": "2025-08-17", "v": 25467}, {"d": "2025-08-19", "v": 26880}, {"d": "2025-08-21", "v": 27622}, {"d": "2025-08-22", "v": 28687}, {"d": "2025-08-23", "v": 29142}, {"d": "2025-08-24", "v": 30186}, {"d": "2025-08-28", "v": 31245}, {"d": "2025-08-29", "v": 32440}, {"d": "2025-08-30", "v": 33630}, {"d": "2025-08-31", "v": 34226}, {"d": "2025-09-02", "v": 35203}, {"d": "2025-09-03", "v": 36204}, {"d": "2025-09-05", "v": 37246}, {"d": "2025-09-15", "v": 38401}, {"d": "2025-09-16", "v": 39561}, {"d": "2025-09-18", "v": 40174}, {"d": "2025-09-30", "v": 41003}, {"d": "2025-10-03", "v": 41765}, {"d": "2025-10-03", "v": 41981}, {"d": "2025-10-04", "v": 42520}, {"d": "2025-10-05", "v": 43085}, {"d": "2025-10-06", "v": 43970}, {"d": "2025-10-08", "v": 44615}, {"d": "2025-10-09", "v": 44973}, {"d": "2025-10-22", "v": 45469}, {"d": "2025-10-24", "v": 46331}, {"d": "2025-11-13", "v": 47026}, {"d": "2025-11-14", "v": 48042}, {"d": "2025-11-14", "v": 48615}, {"d": "2026-01-18", "v": 49228}, {"d": "2026-02-28", "v": 50394}, {"d": "2026-03-07", "v": 51229}, {"d": "2026-03-14", "v": 52331}, {"d": "2026-03-20", "v": 53925}, {"d": "2026-03-31", "v": 54516}, {"d": "2026-04-01", "v": 55160}, {"d": "2026-04-07", "v": 56223}, {"d": "2026-04-08", "v": 56898}, {"d": "2026-04-09", "v": 57761}, {"d": "2026-04-14", "v": 58212}, {"d": "2026-04-15", "v": 58719}, {"d": "2026-04-17", "v": 59215}, {"d": "2026-04-23", "v": 59779}, {"d": "2026-04-24", "v": 60453}, {"d": "2026-04-25", "v": 61115}, {"d": "2026-04-25", "v": 61253}, {"d": "2026-05-01", "v": 62693}, {"d": "2026-05-02", "v": 63279}, {"d": "2026-05-04", "v": 63918}, {"d": "2026-05-04", "v": 64657}, {"d": "2026-05-05", "v": 65139}, {"d": "2026-05-06", "v": 66086}, {"d": "2026-05-07", "v": 67059}, {"d": "2026-05-08", "v": 67653}, {"d": "2026-05-09", "v": 68687}, {"d": "2026-05-10", "v": 69463}, {"d": "2026-05-10", "v": 70482}, {"d": "2026-05-14", "v": 71242}, {"d": "2026-05-14", "v": 71432}, {"d": "2026-05-15", "v": 72559}, {"d": "2026-05-16", "v": 73848}, {"d": "2026-05-20", "v": 75078}, {"d": "2026-05-21", "v": 76194}, {"d": "2026-05-24", "v": 77156}, {"d": "2026-05-25", "v": 78370}, {"d": "2026-06-02", "v": 78875}, {"d": "2026-06-03", "v": 80307}, {"d": "2026-06-04", "v": 80813}, {"d": "2026-06-09", "v": 81825}, {"d": "2026-06-10", "v": 82818}, {"d": "2026-06-11", "v": 83938}], "vo2": [{"d": "2023-05-05", "v": 33.16}, {"d": "2023-07-06", "v": 36.86}, {"d": "2023-07-28", "v": 40.65}, {"d": "2023-08-07", "v": 40.49}, {"d": "2023-10-16", "v": 38.83}, {"d": "2023-10-17", "v": 38.71}, {"d": "2023-10-18", "v": 38.91}, {"d": "2023-10-19", "v": 38.76}, {"d": "2023-11-06", "v": 38.77}, {"d": "2023-11-14", "v": 38.51}, {"d": "2023-11-17", "v": 37.66}, {"d": "2023-11-18", "v": 37.57}, {"d": "2023-11-20", "v": 38.45}, {"d": "2023-11-22", "v": 39.02}, {"d": "2023-11-25", "v": 39.43}, {"d": "2023-11-27", "v": 39.53}, {"d": "2023-11-29", "v": 39.58}, {"d": "2023-12-01", "v": 39.64}, {"d": "2023-12-27", "v": 36.47}, {"d": "2023-12-30", "v": 36.39}, {"d": "2024-01-04", "v": 36.35}, {"d": "2024-01-05", "v": 35.11}, {"d": "2024-02-04", "v": 34.87}, {"d": "2024-06-29", "v": 32.36}, {"d": "2024-06-30", "v": 32.93}, {"d": "2025-01-07", "v": 33.19}, {"d": "2025-01-08", "v": 33.15}, {"d": "2025-01-21", "v": 33.39}, {"d": "2025-01-22", "v": 33.41}, {"d": "2025-01-23", "v": 33.3}, {"d": "2025-01-24", "v": 33.33}, {"d": "2025-01-25", "v": 33.84}, {"d": "2025-08-05", "v": 38.0}, {"d": "2025-08-14", "v": 37.87}, {"d": "2025-08-29", "v": 38.0}, {"d": "2026-02-06", "v": 36.77}, {"d": "2026-02-07", "v": 36.75}, {"d": "2026-02-09", "v": 36.67}, {"d": "2026-02-21", "v": 36.53}, {"d": "2026-02-23", "v": 36.62}, {"d": "2026-03-11", "v": 36.66}, {"d": "2026-04-24", "v": 32.68}, {"d": "2026-05-25", "v": 34.59}, {"d": "2026-06-03", "v": 34.36}, {"d": "2026-06-05", "v": 34.23}, {"d": "2026-06-06", "v": 34.3}, {"d": "2026-06-08", "v": 33.94}], "temps": [{"c": 25.4, "mets": 5.62, "d": "2025-06-22"}, {"c": 20.9, "mets": 6.38, "d": "2025-06-28"}, {"c": 26.9, "mets": 5.28, "d": "2025-06-28"}, {"c": 27.1, "mets": 7.95, "d": "2025-06-29"}, {"c": 21.6, "mets": 9.19, "d": "2025-06-30"}, {"c": 21.1, "mets": 4.25, "d": "2025-07-02"}, {"c": 21.2, "mets": 8.9, "d": "2025-07-02"}, {"c": 20.8, "mets": 5.26, "d": "2025-07-03"}, {"c": 21.2, "mets": 6.29, "d": "2025-07-03"}, {"c": 20.0, "mets": 6.39, "d": "2025-07-05"}, {"c": 20.8, "mets": 7.58, "d": "2025-07-08"}, {"c": 21.1, "mets": 8.41, "d": "2025-07-09"}, {"c": 21.5, "mets": 3.71, "d": "2025-07-11"}, {"c": 21.7, "mets": 10.71, "d": "2025-07-12"}, {"c": 21.4, "mets": 10.24, "d": "2025-07-14"}, {"c": 21.8, "mets": 8.48, "d": "2025-07-29"}, {"c": 22.8, "mets": 8.96, "d": "2025-07-30"}, {"c": 22.9, "mets": 8.54, "d": "2025-07-31"}, {"c": 24.0, "mets": 7.78, "d": "2025-08-01"}, {"c": 24.3, "mets": 9.24, "d": "2025-08-03"}, {"c": 23.1, "mets": 9.17, "d": "2025-08-04"}, {"c": 22.6, "mets": 9.03, "d": "2025-08-05"}, {"c": 22.2, "mets": 9.55, "d": "2025-08-05"}, {"c": 22.9, "mets": 9.23, "d": "2025-08-06"}, {"c": 22.4, "mets": 8.74, "d": "2025-08-06"}, {"c": 20.9, "mets": 8.19, "d": "2025-08-13"}, {"c": 21.1, "mets": 5.27, "d": "2025-08-14"}, {"c": 21.1, "mets": 7.05, "d": "2025-08-15"}, {"c": 21.0, "mets": 4.43, "d": "2025-08-16"}, {"c": 21.8, "mets": 5.29, "d": "2025-08-17"}, {"c": 21.9, "mets": 9.03, "d": "2025-08-19"}, {"c": 24.2, "mets": 7.12, "d": "2025-08-21"}, {"c": 23.7, "mets": 8.05, "d": "2025-08-22"}, {"c": 21.4, "mets": 5.25, "d": "2025-08-23"}, {"c": 21.1, "mets": 7.08, "d": "2025-08-24"}, {"c": 22.2, "mets": 7.14, "d": "2025-08-28"}, {"c": 22.6, "mets": 9.05, "d": "2025-08-29"}, {"c": 21.4, "mets": 8.55, "d": "2025-08-30"}, {"c": 22.7, "mets": 8.07, "d": "2025-08-31"}, {"c": 22.6, "mets": 8.47, "d": "2025-09-02"}, {"c": 22.3, "mets": 9.07, "d": "2025-09-03"}, {"c": 23.8, "mets": 7.89, "d": "2025-09-05"}, {"c": 23.3, "mets": 9.63, "d": "2025-09-15"}, {"c": 22.5, "mets": 10.74, "d": "2025-09-16"}, {"c": 21.8, "mets": 6.58, "d": "2025-09-18"}, {"c": 23.7, "mets": 6.68, "d": "2025-09-30"}, {"c": 23.6, "mets": 6.43, "d": "2025-10-03"}, {"c": 22.5, "mets": 5.36, "d": "2025-10-03"}, {"c": 23.2, "mets": 9.86, "d": "2025-10-04"}, {"c": 23.7, "mets": 6.8, "d": "2025-10-05"}, {"c": 24.1, "mets": 8.91, "d": "2025-10-06"}, {"c": 22.6, "mets": 5.33, "d": "2025-10-08"}, {"c": 21.8, "mets": 5.12, "d": "2025-10-09"}, {"c": 21.0, "mets": 9.62, "d": "2025-10-22"}, {"c": 22.0, "mets": 6.88, "d": "2025-10-24"}, {"c": 23.1, "mets": 8.2, "d": "2025-11-13"}, {"c": 24.3, "mets": 7.89, "d": "2025-11-14"}, {"c": 18.1, "mets": 7.09, "d": "2025-11-14"}, {"c": 22.5, "mets": 10.3, "d": "2026-01-18"}, {"c": 26.9, "mets": 10.08, "d": "2026-03-07"}, {"c": 27.3, "mets": 10.3, "d": "2026-03-14"}, {"c": 26.2, "mets": 11.57, "d": "2026-03-20"}, {"c": 27.5, "mets": 11.28, "d": "2026-03-31"}, {"c": 27.3, "mets": 11.6, "d": "2026-04-01"}, {"c": 23.9, "mets": 11.5, "d": "2026-04-07"}, {"c": 25.6, "mets": 11.21, "d": "2026-04-08"}, {"c": 27.6, "mets": 10.91, "d": "2026-04-09"}, {"c": 28.0, "mets": 11.02, "d": "2026-04-14"}, {"c": 28.0, "mets": 9.45, "d": "2026-04-15"}, {"c": 28.0, "mets": 10.6, "d": "2026-04-17"}, {"c": 27.4, "mets": 8.44, "d": "2026-04-23"}, {"c": 27.7, "mets": 9.01, "d": "2026-04-24"}, {"c": 28.1, "mets": 8.38, "d": "2026-04-25"}, {"c": 29.9, "mets": 10.46, "d": "2026-04-25"}, {"c": 28.6, "mets": 9.86, "d": "2026-05-01"}, {"c": 27.8, "mets": 7.89, "d": "2026-05-02"}, {"c": 28.2, "mets": 10.87, "d": "2026-05-04"}, {"c": 26.9, "mets": 10.53, "d": "2026-05-06"}, {"c": 30.3, "mets": 9.19, "d": "2026-05-07"}, {"c": 26.7, "mets": 9.75, "d": "2026-05-08"}, {"c": 30.9, "mets": 9.45, "d": "2026-05-09"}, {"c": 25.6, "mets": 7.73, "d": "2026-05-10"}, {"c": 29.5, "mets": 10.49, "d": "2026-05-14"}, {"c": 27.2, "mets": 12.01, "d": "2026-05-14"}, {"c": 29.9, "mets": 11.16, "d": "2026-05-15"}, {"c": 30.6, "mets": 11.56, "d": "2026-05-16"}, {"c": 28.9, "mets": 10.91, "d": "2026-05-20"}, {"c": 28.1, "mets": 8.76, "d": "2026-05-21"}, {"c": 26.8, "mets": 8.69, "d": "2026-05-24"}, {"c": 29.1, "mets": 10.45, "d": "2026-05-25"}, {"c": 24.5, "mets": 11.76, "d": "2026-06-02"}, {"c": 25.3, "mets": 12.07, "d": "2026-06-03"}, {"c": 24.9, "mets": 9.56, "d": "2026-06-04"}, {"c": 25.9, "mets": 9.45, "d": "2026-06-09"}, {"c": 26.1, "mets": 9.06, "d": "2026-06-10"}, {"c": 26.7, "mets": 9.83, "d": "2026-06-11"}], "top": [{"d": "2026-03-20", "dur": 128.9, "kcal": 1594.4, "hr": 173.323, "hrmax": 201.0, "mets": 11.57, "h": 19.1, "dow": 4}, {"d": "2026-05-01", "dur": 117.9, "kcal": 1440.2, "hr": 157.848, "hrmax": 180.0, "mets": 9.86, "h": 19.1, "dow": 4}, {"d": "2026-06-03", "dur": 111.7, "kcal": 1432.8, "hr": 171.699, "hrmax": 194.0, "mets": 12.07, "h": 17.6, "dow": 2}, {"d": "2025-08-19", "dur": 147.9, "kcal": 1412.7, "hr": 139.066, "hrmax": 167.0, "mets": 9.03, "h": 20.3, "dow": 1}, {"d": "2026-05-16", "dur": 98.3, "kcal": 1288.9, "hr": 172.185, "hrmax": 192.0, "mets": 11.56, "h": 18.1, "dow": 5}, {"d": "2026-05-20", "dur": 111.7, "kcal": 1229.2, "hr": 163.123, "hrmax": 186.0, "mets": 10.91, "h": 18.1, "dow": 2}, {"d": "2026-05-25", "dur": 110.0, "kcal": 1213.8, "hr": 151.166, "hrmax": 175.0, "mets": 10.45, "h": 17.1, "dow": 0}, {"d": "2025-08-29", "dur": 129.1, "kcal": 1194.8, "hr": 135.497, "hrmax": 162.0, "mets": 9.05, "h": 20.0, "dow": 4}]};
+</script>
+<script>
+/* Court Time charts v2. Vanilla SVG, no deps. */
+const NS = "http://www.w3.org/2000/svg";
+const tip = document.getElementById('tip');
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const COURT = css('--court'), BALL = css('--ball'), HOT = css('--hot'), INK = css('--ink'),
+      MUTED = css('--muted'), LINE = css('--line'), NIGHT = css('--night'),
+      PAPER = css('--paper'), EASY = css('--easy'), NODATA = css('--nodata');
+
+function el(tag, attrs, parent){
+  const e = document.createElementNS(NS, tag);
+  for(const k in attrs) e.setAttribute(k, attrs[k]);
+  if(parent) parent.appendChild(e);
+  return e;
+}
+function txt(parent, x, y, s, opts={}){
+  const t = el('text', {x, y, fill: opts.fill || MUTED, 'font-size': opts.size || 10,
+    'text-anchor': opts.anchor || 'middle', 'font-family': "'Spline Sans Mono',monospace",
+    'font-weight': opts.weight || 400}, parent);
+  t.textContent = s; return t;
+}
+function hover(e, label){
+  e.addEventListener('mousemove', ev => {
+    tip.textContent = label;
+    tip.style.left = (ev.clientX + 12) + 'px';
+    tip.style.top = (ev.clientY - 30) + 'px';
+    tip.style.opacity = 1;
+  });
+  e.addEventListener('mouseleave', () => tip.style.opacity = 0);
+}
+const metsColor = m => m == null ? NODATA : m < 7 ? EASY : m < 9 ? COURT : m < 11 ? BALL : HOT;
+const MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const moName = m => MO[+m.slice(5,7) - 1];                 // "2025-08" -> "Aug"
+const moFull = m => moName(m) + " '" + m.slice(2,4);       // "2025-08" -> "Aug '25"
+
+/* month axis for the 13-month Jun25..Jun26 bar charts:
+   label every month, add year row under Jun 25 and Jan 26 */
+function monthAxis(svg, months, X, yLabel, yYear){
+  months.forEach((mo, i) => {
+    txt(svg, X(i), yLabel, moName(mo.m), {size: 9});
+    if(mo.m === '2025-06' || mo.m === '2026-01')
+      txt(svg, X(i), yYear, mo.m.slice(0,4), {size: 9, weight: 600, fill: INK});
+  });
+}
+
+/* ---------- hero skyline ---------- */
+(function(){
+  const svg = document.getElementById('skyline');
+  const W = 1000, H = 210, padB = 22;
+  const ss = DATA.sessions;
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => (new Date(d).getTime() - t0) / (t1 - t0) * (W - 8) + 4;
+  const maxDur = Math.max(...ss.map(s => s.dur));
+
+  // month gridlines + labels on the 1st of each month
+  const months = ['2025-07','2025-08','2025-09','2025-10','2025-11','2025-12',
+                  '2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'];
+  months.forEach(m => {
+    const x = tx(m + '-01');
+    el('line', {x1: x, y1: 6, x2: x, y2: H - padB, stroke: LINE, 'stroke-width': 1,
+      'stroke-dasharray': m.endsWith('-01') ? '' : '2 5'}, svg);
+    txt(svg, x + 3, H - 6, moName(m).toUpperCase(), {anchor: 'start', size: 10});
+    if(m === '2026-01') txt(svg, x + 3, 14, '2026 \u2192', {anchor: 'start', size: 10, weight: 600, fill: INK});
+  });
+  txt(svg, 6, 14, '\u2190 2025', {anchor: 'start', size: 10, weight: 600, fill: INK});
+  el('line', {x1: 0, y1: H - padB, x2: W, y2: H - padB, stroke: LINE, 'stroke-width': 2}, svg);
+  txt(svg, tx('2025-12-15'), H - padB - 14, 'DEC · 0 SESSIONS', {size: 10});
+
+  ss.forEach(s => {
+    const x = tx(s.d);
+    const h = 12 + (s.dur / maxDur) * (H - 46 - padB);
+    const r = el('rect', {x: x - 2.6, y: H - padB - h, width: 5.2, height: h, rx: 2,
+      fill: metsColor(s.mets)}, svg);
+    hover(r, `${s.d} · ${Math.round(s.dur)} min · ${s.mets ?? 'no'} METs · ${Math.round(s.kcal)} kcal`);
+  });
+})();
+
+/* ---------- generic monthly bar chart with y-grid + month axis ---------- */
+function barChart(id, key, color, unit, grid){
+  const svg = document.getElementById(id);
+  const [W, H] = svg.getAttribute('viewBox').split(' ').slice(2).map(Number);
+  const m = DATA.months, padL = 32, padR = 8, padB = 34, padT = 14;
+  const vals = m.map(x => x[key] ?? 0);
+  const peak = Math.max(...vals);
+  const max = Math.max(peak, grid[grid.length - 1]) * 1.1;
+  const bw = (W - padL - padR) / m.length;
+  const X = i => padL + i*bw + bw/2;
+  grid.forEach(g => {
+    const y = H - padB - g / max * (H - padT - padB);
+    el('line', {x1: padL, y1: y, x2: W - padR, y2: y, stroke: LINE}, svg);
+    txt(svg, padL - 5, y + 3, g, {anchor: 'end', size: 9});
+  });
+  m.forEach((mo, i) => {
+    const v = mo[key] ?? 0;
+    const h = v / max * (H - padT - padB);
+    el('rect', {x: X(i) - bw*0.36, y: H - padB - h, width: bw*0.72, height: Math.max(h, 1.5),
+      rx: 5, fill: v === 0 ? LINE : (v === peak ? BALL : color)},
+      svg).onmousemove = null;
+    const r = svg.lastChild;
+    hover(r, `${moFull(mo.m)} · ${v}${unit}`);
+    if(v === peak && v > 0) txt(svg, X(i), H - padB - h + 14, Math.round(v), {fill: '#fff', weight: 600, size: 10.5});
+  });
+  monthAxis(svg, m, X, H - 20, H - 8);
+}
+barChart('c-hours', 'h', COURT, ' h', [10, 20, 30]);
+barChart('c-sessions', 'n', NIGHT, ' sessions', [10, 20]);
+barChart('c-dur', 'dur', COURT, ' min avg', [40, 80, 120]);
+
+/* ---------- weekly bars with month axis ---------- */
+(function(){
+  const svg = document.getElementById('c-weeks');
+  const [W, H] = [460, 210], padB = 34, padT = 12, padL = 26, padR = 8;
+  const wk = DATA.weeks;
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const max = 14;
+  [5, 10].forEach(g => {
+    const y = H - padB - g / max * (H - padT - padB);
+    el('line', {x1: padL, y1: y, x2: W - padR, y2: y, stroke: LINE}, svg);
+    txt(svg, padL - 5, y + 3, g + 'h', {anchor: 'end', size: 9});
+  });
+  // quarter ticks
+  ['2025-07-01','2025-10-01','2026-01-01','2026-04-01'].forEach(d => {
+    const x = tx(d);
+    el('line', {x1: x, y1: padT, x2: x, y2: H - padB, stroke: LINE, 'stroke-dasharray': '2 5'}, svg);
+    txt(svg, x, H - 20, moName(d.slice(0,7)), {size: 9});
+    txt(svg, x, H - 8, d.slice(0,4), {size: 9, weight: 600, fill: INK});
+  });
+  el('line', {x1: padL, y1: H - padB, x2: W - padR, y2: H - padB, stroke: LINE}, svg);
+  wk.forEach(w => {
+    const x = tx(w.w);
+    const h = w.h / max * (H - padT - padB);
+    const r = el('rect', {x: x - 3.5, y: H - padB - h, width: 7, height: h, rx: 2.5,
+      fill: w.h > 12 ? BALL : COURT}, svg);
+    hover(r, `week of ${w.w} · ${w.h} h`);
+  });
+})();
+
+/* ---------- METs scatter + rolling trendline ---------- */
+(function(){
+  const svg = document.getElementById('c-mets');
+  const [W, H] = [460, 260], padL = 30, padB = 34, padT = 12, padR = 8;
+  const ss = DATA.sessions.filter(s => s.mets);
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const yMin = 4, yMax = 14;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  [5, 7, 9, 11, 13].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 6, Y(g) + 3, g, {anchor: 'end', size: 9.5});
+  });
+  ['2025-07-01','2025-10-01','2026-01-01','2026-04-01'].forEach(d => {
+    const x = tx(d);
+    txt(svg, x, H - 20, moName(d.slice(0,7)), {size: 9});
+    txt(svg, x, H - 8, d.slice(0,4), {size: 9, weight: 600, fill: INK});
+  });
+  ss.forEach(s => {
+    const c = el('circle', {cx: tx(s.d), cy: Y(s.mets), r: 4.2, fill: metsColor(s.mets),
+      stroke: PAPER, 'stroke-width': 1.1, opacity: .85}, svg);
+    hover(c, `${s.d} · ${s.mets} METs · HR ${Math.round(s.hr)} avg`);
+  });
+  // rolling 9-session trendline
+  let path = '';
+  DATA.mets_trend.forEach((p, i) => path += (i ? 'L' : 'M') + tx(p.d).toFixed(1) + ' ' + Y(p.v).toFixed(1) + ' ');
+  el('path', {d: path, fill: 'none', stroke: INK, 'stroke-width': 2.6,
+    'stroke-linecap': 'round', 'stroke-linejoin': 'round'}, svg);
+  txt(svg, tx('2025-08-10'), Y(6.2) + 14, 'trend (9-session avg)', {fill: INK, weight: 600, size: 10, anchor: 'start'});
+  el('line',{x1: tx('2025-08-10') - 4, y1: Y(6.2) + 10, x2: tx('2025-07-15'), y2: Y(7.05), stroke: INK, 'stroke-width': 1},svg);
+})();
+
+/* ---------- HR monthly lines ---------- */
+function lineSeries(svg, pts, color, dashed){
+  const d = pts.filter(p => p[1] != null);
+  if(!d.length) return;
+  let path = '';
+  d.forEach((p, i) => path += (i ? 'L' : 'M') + p[0] + ' ' + p[1] + ' ');
+  el('path', {d: path, fill: 'none', stroke: color, 'stroke-width': 2.4,
+    'stroke-linecap': 'round', 'stroke-linejoin': 'round',
+    ...(dashed ? {'stroke-dasharray': '5 5'} : {})}, svg);
+}
+(function(){
+  const svg = document.getElementById('c-hr');
+  const [W, H] = [460, 260], padL = 34, padB = 34, padT = 14, padR = 10;
+  const all = DATA.months;
+  const yMin = 100, yMax = 200;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  const X = i => padL + i / (all.length - 1) * (W - padL - padR);
+  [120, 150, 180].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 6, Y(g) + 3, g, {anchor: 'end', size: 9.5});
+  });
+  const peakByMonth = {};
+  DATA.sessions.forEach(s => {
+    const mo = s.d.slice(0, 7);
+    (peakByMonth[mo] = peakByMonth[mo] || []).push(s.hrmax);
+  });
+  const pkPts = all.map((mo, i) => {
+    const arr = peakByMonth[mo.m];
+    return [X(i), arr ? Y(arr.reduce((a,b) => a+b, 0) / arr.length) : null];
+  });
+  lineSeries(svg, pkPts, BALL, true);
+  lineSeries(svg, all.map((mo, i) => [X(i), mo.hr ? Y(mo.hr) : null]), HOT, false);
+  all.forEach((mo, i) => {
+    if(mo.hr){
+      const c = el('circle', {cx: X(i), cy: Y(mo.hr), r: 4, fill: HOT, stroke: PAPER, 'stroke-width': 1.2}, svg);
+      hover(c, `${moFull(mo.m)} · avg ${mo.hr} bpm`);
+    }
+  });
+  monthAxis(svg, all, X, H - 20, H - 8);
+  txt(svg, W - padR, Y(186) - 8, 'avg peak HR', {anchor: 'end', fill: BALL, weight: 600});
+  txt(svg, W - padR, Y(152) + 18, 'avg session HR', {anchor: 'end', fill: HOT, weight: 600});
+})();
+
+/* ---------- clock histogram ---------- */
+(function(){
+  const svg = document.getElementById('c-clock');
+  const [W, H] = [460, 250], padB = 30, padT = 16, padL = 26, padR = 8;
+  const counts = Array(24).fill(0);
+  DATA.sessions.forEach(s => counts[Math.floor(s.h)]++);
+  const max = Math.max(...counts) * 1.12;
+  const bw = (W - padL - padR) / 24;
+  [10, 20].forEach(g => {
+    const y = H - padB - g / max * (H - padT - padB);
+    el('line', {x1: padL, y1: y, x2: W - padR, y2: y, stroke: LINE}, svg);
+    txt(svg, padL - 5, y + 3, g, {anchor: 'end', size: 9});
+  });
+  counts.forEach((c, h) => {
+    const bh = c / max * (H - padT - padB);
+    const night = h >= 21 || h < 4;
+    const r = el('rect', {x: padL + h*bw + bw*0.12, y: H - padB - bh, width: bw*0.76,
+      height: Math.max(bh, 1.5), rx: 3.5,
+      fill: c === 0 ? LINE : (h === 20 ? BALL : (night ? NIGHT : COURT))}, svg);
+    hover(r, `${String(h).padStart(2,'0')}:00 to ${String(h+1).padStart(2,'0')}:00 · ${c} sessions`);
+  });
+  [0, 6, 12, 18, 23].forEach(h =>
+    txt(svg, padL + h*bw + bw/2, H - 10, h === 0 ? '12am' : h === 12 ? '12pm' : h < 12 ? h + 'am' : (h - 12) + 'pm', {size: 9}));
+  txt(svg, padL + 20.5*bw, padT - 2, '8 PM · 25 starts', {fill: INK, weight: 600, size: 11});
+})();
+
+/* ---------- day of week ---------- */
+(function(){
+  const svg = document.getElementById('c-dow');
+  const [W, H] = [460, 250], padB = 26, padT = 16, padL = 8;
+  const hours = [14.1, 22.4, 24.6, 27.1, 30.3, 24.8, 16.3];
+  const names = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const max = Math.max(...hours) * 1.15;
+  const bw = (W - padL*2) / 7;
+  hours.forEach((v, i) => {
+    const bh = v / max * (H - padT - padB);
+    const r = el('rect', {x: padL + i*bw + bw*0.16, y: H - padB - bh, width: bw*0.68,
+      height: bh, rx: 7, fill: i === 4 ? BALL : COURT}, svg);
+    hover(r, `${names[i]} · ${v} h total`);
+    txt(svg, padL + i*bw + bw/2, H - padB - bh - 7, v + 'h', {fill: INK, weight: 600, size: 11});
+    txt(svg, padL + i*bw + bw/2, H - 8, names[i], {size: 10});
+  });
+})();
+
+/* ---------- RHR + HRV health lines (18 months, Jan 25 to Jun 26) ---------- */
+function healthLine(id, key, color, yMin, yMax, grid, unit){
+  const svg = document.getElementById(id);
+  const [W, H] = [460, 240], padL = 34, padB = 34, padT = 14, padR = 10;
+  const hm = DATA.health;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  const X = i => padL + i / (hm.length - 1) * (W - padL - padR);
+  grid.forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 6, Y(g) + 3, g, {anchor: 'end', size: 9.5});
+  });
+  const eraStart = hm.findIndex(x => x.m === '2025-06');
+  el('rect', {x: X(eraStart), y: padT - 4, width: X(hm.length - 1) - X(eraStart),
+    height: H - padT - padB + 4, fill: css('--court-soft'), opacity: .4, rx: 8}, svg);
+  txt(svg, X(eraStart) + 6, padT + 7, 'PICKLEBALL ERA', {anchor: 'start', size: 8.5, fill: COURT, weight: 600});
+  lineSeries(svg, hm.map((x, i) => [X(i), x[key] != null ? Y(x[key]) : null]), color);
+  hm.forEach((x, i) => {
+    if(x[key] != null){
+      const c = el('circle', {cx: X(i), cy: Y(x[key]), r: 3.6, fill: color, stroke: PAPER, 'stroke-width': 1.2}, svg);
+      hover(c, `${moFull(x.m)} · ${x[key]} ${unit}`);
+    }
+    // label Jan, Apr, Jul, Oct
+    if(['01','04','07','10'].includes(x.m.slice(5))){
+      txt(svg, X(i), H - 20, moName(x.m), {size: 9});
+      if(x.m.slice(5) === '01') txt(svg, X(i), H - 8, x.m.slice(0,4), {size: 9, weight: 600, fill: INK});
+    }
+  });
+}
+healthLine('c-rhr', 'rhr', HOT, 50, 75, [55, 60, 65, 70], 'bpm');
+healthLine('c-hrv', 'hrv', NIGHT, 25, 60, [30, 40, 50], 'ms');
+
+/* ================= v3 additions ================= */
+
+/* ---------- calendar heatmap ---------- */
+(function(){
+  const svg = document.getElementById('c-cal');
+  const W = 1000, cell = 16, gap = 3, padT = 26, padL = 34;
+  const start = new Date('2025-06-16');           // Monday before first session
+  const end = new Date('2026-06-14');
+  const byDate = {};
+  DATA.calendar.forEach(c => byDate[c.d] = c.min);
+  const maxMin = Math.max(...DATA.calendar.map(c => c.min));
+  const dayNames = ['Mon','Wed','Fri','Sun'];
+  [0,2,4,6].forEach((r,i) => txt(svg, padL - 8, padT + r*(cell+gap) + cell - 4, dayNames[i], {anchor:'end', size:9}));
+  let d = new Date(start), col = 0, lastMo = '';
+  while(d <= end){
+    const row = (d.getDay() + 6) % 7;  // Mon=0
+    const key = d.toISOString().slice(0,10);
+    const min = byDate[key];
+    const mo = key.slice(0,7);
+    if(row === 0 && mo !== lastMo && d.getDate() <= 7){
+      txt(svg, padL + col*(cell+gap), padT - 10, moName(mo) + (mo.slice(5)==='01' || mo==='2025-06' ? " '" + mo.slice(2,4) : ''), {anchor:'start', size:9.5, weight: mo.slice(5)==='01' ? 600 : 400, fill: mo.slice(5)==='01' ? INK : MUTED});
+      lastMo = mo;
+    }
+    let fill = '#EEEAE0';
+    if(min){
+      const t = Math.min(min / 130, 1);
+      // teal scale: light -> deep court -> ink for monsters
+      fill = t < .35 ? '#C2D8CD' : t < .6 ? '#8AB4A4' : t < .85 ? COURT : '#123F35';
+    }
+    const r = el('rect', {x: padL + col*(cell+gap), y: padT + row*(cell+gap),
+      width: cell, height: cell, rx: 4, fill}, svg);
+    if(min) hover(r, `${key} · ${min} min`);
+    if(row === 6) col++;
+    d.setDate(d.getDate() + 1);
+  }
+  // legend
+  const lx = W - 220, ly = padT + 7*(cell+gap) + 6;
+  txt(svg, lx - 8, ly + 11, 'less', {anchor:'end', size:9});
+  ['#EEEAE0','#C2D8CD','#8AB4A4',COURT,'#123F35'].forEach((c,i) =>
+    el('rect', {x: lx + i*20, y: ly, width: 16, height: 16, rx: 4, fill: c}, svg));
+  txt(svg, lx + 5*20 + 6, ly + 11, 'more', {anchor:'start', size:9});
+})();
+
+/* ---------- temperature vs effort ---------- */
+(function(){
+  const svg = document.getElementById('c-temp');
+  const W = 460, H = 260, padL = 36, padB = 30, padT = 12, padR = 10;
+  const ts = DATA.temps;
+  const xMin = 17, xMax = 32, yMin = 4, yMax = 14;
+  const X = c => padL + (c - xMin) / (xMax - xMin) * (W - padL - padR);
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  [5,7,9,11,13].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 6, Y(g) + 3, g, {anchor:'end', size:9});
+  });
+  [18,22,26,30].forEach(c => txt(svg, X(c), H - 10, c + '\u00B0C', {size:9.5}));
+  ts.forEach(t => {
+    const isNew = t.d >= '2026';
+    const c = el('circle', {cx: X(t.c), cy: Y(t.mets), r: 4.2,
+      fill: isNew ? HOT : COURT, opacity: .62, stroke: PAPER, 'stroke-width': 1}, svg);
+    hover(c, `${t.d} \u00B7 ${t.c}\u00B0C \u00B7 ${t.mets} METs`);
+  });
+  txt(svg, W - padR, Y(13.3), '\u25CF 2026', {anchor:'end', fill: HOT, weight:600, size:10.5});
+  txt(svg, W - padR - 52, Y(13.3), '\u25CF 2025', {anchor:'end', fill: COURT, weight:600, size:10.5});
+})();
+
+/* ---------- zone phase comparison (horizontal stacked) ---------- */
+const ZCOLORS = [EASY, COURT, BALL, css('--z4'), HOT];
+const ZNAMES = ['Z1 easy','Z2 steady','Z3 hard','Z4 very hard','Z5 max'];
+(function(){
+  const svg = document.getElementById('c-zphase');
+  const W = 460, padL = 60, padR = 10, barH = 46;
+  const rows = [
+    {label: '2025', y: 36, data: DATA.zone_phase.p25, note: DATA.zone_phase.h25 + 'h HR data'},
+    {label: '2026', y: 122, data: DATA.zone_phase.p26, note: DATA.zone_phase.h26 + 'h HR data'},
+  ];
+  rows.forEach(r => {
+    txt(svg, padL - 10, r.y + barH/2 + 4, r.label, {anchor:'end', size:13, weight:600, fill: INK});
+    txt(svg, padL - 10, r.y + barH/2 + 18, r.note, {anchor:'end', size:8.5});
+    let x = padL;
+    r.data.forEach((pct, i) => {
+      const w = pct / 100 * (W - padL - padR);
+      if(w < 0.5) return;
+      const rect = el('rect', {x, y: r.y, width: w, height: barH,
+        fill: ZCOLORS[i], rx: 0}, svg);
+      hover(rect, `${ZNAMES[i]} · ${pct}% of ${r.label} court time`);
+      if(pct >= 8) txt(svg, x + w/2, r.y + barH/2 + 4, Math.round(pct) + '%', {fill:'#fff', weight:600, size:11});
+      x += w;
+    });
+    el('rect', {x: padL, y: r.y, width: W - padL - padR, height: barH, fill:'none', stroke: LINE, rx: 8}, svg);
+  });
+  // bracket for Z4+Z5
+  const z45_25 = DATA.zone_phase.p25[3] + DATA.zone_phase.p25[4];
+  const z45_26 = DATA.zone_phase.p26[3] + DATA.zone_phase.p26[4];
+  txt(svg, W - padR, 24, `Z4+Z5: ${Math.round(z45_25)}%`, {anchor:'end', size:10, fill: HOT, weight:600});
+  txt(svg, W - padR, 110, `Z4+Z5: ${Math.round(z45_26)}%`, {anchor:'end', size:10, fill: HOT, weight:600});
+  // legend
+  let lx = padL;
+  ZNAMES.forEach((n, i) => {
+    el('rect', {x: lx, y: 196, width: 10, height: 10, rx: 3, fill: ZCOLORS[i]}, svg);
+    const t = txt(svg, lx + 14, 205, n, {anchor:'start', size:9});
+    lx += 14 + n.length * 5.6 + 14;
+  });
+})();
+
+/* ---------- zone share by month (100% stacked) ---------- */
+(function(){
+  const svg = document.getElementById('c-zmonth');
+  const W = 460, H = 240, padL = 36, padB = 34, padT = 12, padR = 8;
+  const zm = {};
+  DATA.zone_months.forEach(z => zm[z.m] = z.z);
+  const months = DATA.months;
+  const bw = (W - padL - padR) / months.length;
+  const X = i => padL + i*bw + bw/2;
+  [25, 50, 75].forEach(g => {
+    const y = H - padB - g / 100 * (H - padT - padB);
+    el('line', {x1: padL, y1: y, x2: W - padR, y2: y, stroke: LINE}, svg);
+    txt(svg, padL - 5, y + 3, g + '%', {anchor:'end', size:9});
+  });
+  months.forEach((mo, i) => {
+    const z = zm[mo.m] || [0,0,0,0,0];
+    const tot = z.reduce((a,b)=>a+b,0);
+    if(tot < 60){
+      if(mo.n > 0) txt(svg, X(i), H - padB - 6, '\u00B7', {size:14});
+      return;
+    }
+    let y = H - padB;
+    z.forEach((v, zi) => {
+      const h = v / tot * (H - padT - padB);
+      if(h > 0.4){
+        const r = el('rect', {x: X(i) - bw*0.36, y: y - h, width: bw*0.72, height: h,
+          fill: ZCOLORS[zi]}, svg);
+        hover(r, `${moFull(mo.m)} \u00B7 ${ZNAMES[zi]} \u00B7 ${Math.round(v/tot*100)}% (${v} min)`);
+      }
+      y -= h;
+    });
+  });
+  monthAxis(svg, months, X, H - 20, H - 8);
+})();
+
+/* ---------- cumulative kcal ---------- */
+(function(){
+  const svg = document.getElementById('c-cum');
+  const W = 460, H = 250, padL = 40, padB = 34, padT = 12, padR = 10;
+  const cs = DATA.cum_kcal;
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const max = 85000;
+  const Y = v => H - padB - v / max * (H - padT - padB);
+  [20000, 40000, 60000, 80000].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 5, Y(g) + 3, (g/1000) + 'k', {anchor:'end', size:9});
+  });
+  ['2025-07-01','2025-10-01','2026-01-01','2026-04-01'].forEach(d => {
+    txt(svg, tx(d), H - 20, moName(d.slice(0,7)), {size:9});
+    txt(svg, tx(d), H - 8, d.slice(0,4), {size:9, weight:600, fill: INK});
+  });
+  let path = 'M' + tx(cs[0].d) + ' ' + Y(0) + ' ';
+  cs.forEach(p => path += 'L' + tx(p.d).toFixed(1) + ' ' + Y(p.v).toFixed(1) + ' ');
+  el('path', {d: path + 'L' + tx(cs[cs.length-1].d) + ' ' + Y(0) + ' Z',
+    fill: css('--court-soft'), opacity: .7}, svg);
+  el('path', {d: path, fill: 'none', stroke: COURT, 'stroke-width': 2.6,
+    'stroke-linecap':'round'}, svg);
+  // winter shelf annotation
+  txt(svg, tx('2025-12-20'), Y(52000) - 8, 'the winter shelf', {size:10, fill: MUTED});
+  el('line', {x1: tx('2025-11-20'), y1: Y(48500), x2: tx('2026-02-20'), y2: Y(48500),
+    stroke: HOT, 'stroke-width': 2, 'stroke-dasharray':'4 4'}, svg);
+  const last = cs[cs.length-1];
+  el('circle', {cx: tx(last.d), cy: Y(last.v), r: 5, fill: COURT, stroke: PAPER,'stroke-width':1.5}, svg);
+  txt(svg, tx(last.d) - 8, Y(last.v) - 10, '83,938', {anchor:'end', weight:600, fill: INK, size:12});
+})();
+
+/* ---------- kcal/h trend ---------- */
+(function(){
+  const svg = document.getElementById('c-kcalh');
+  const W = 460, H = 250, padL = 36, padB = 34, padT = 12, padR = 10;
+  const ss = DATA.sessions.filter(s => s.dur > 20);
+  const t0 = new Date('2025-06-15').getTime(), t1 = new Date('2026-06-20').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const yMin = 250, yMax = 900;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  [400, 600, 800].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 5, Y(g) + 3, g, {anchor:'end', size:9});
+  });
+  ['2025-07-01','2025-10-01','2026-01-01','2026-04-01'].forEach(d => {
+    txt(svg, tx(d), H - 20, moName(d.slice(0,7)), {size:9});
+    txt(svg, tx(d), H - 8, d.slice(0,4), {size:9, weight:600, fill: INK});
+  });
+  ss.forEach(s => {
+    const v = s.kcal / (s.dur / 60);
+    if(v < yMin || v > yMax) return;
+    const c = el('circle', {cx: tx(s.d), cy: Y(v), r: 3.8, fill: metsColor(s.mets),
+      opacity: .7, stroke: PAPER, 'stroke-width': 1}, svg);
+    hover(c, `${s.d} · ${Math.round(v)} kcal/h`);
+  });
+  let path = '';
+  DATA.kcalh_trend.forEach((p, i) => path += (i ? 'L' : 'M') + tx(p.d).toFixed(1) + ' ' + Y(p.v).toFixed(1) + ' ');
+  el('path', {d: path, fill:'none', stroke: INK, 'stroke-width': 2.6,
+    'stroke-linecap':'round','stroke-linejoin':'round'}, svg);
+  txt(svg, padL - 5, padT + 2, 'kcal/h', {anchor:'end', size:8.5});
+})();
+
+/* ---------- top sessions table ---------- */
+(function(){
+  const tb = document.getElementById('t-top');
+  const fmt = d => { const dt = new Date(d); return dt.getDate() + ' ' + MO[dt.getMonth()] + ' ' + dt.getFullYear().toString().slice(2); };
+  let h = '<tr><th>Date</th><th>Duration</th><th>Energy</th><th>Avg HR</th><th>Peak HR</th><th>Effort</th></tr>';
+  DATA.top.forEach(s => {
+    const col = metsColor(s.mets);
+    h += `<tr><td>${fmt(s.d)}</td><td>${Math.round(s.dur)} min</td><td><b>${Math.round(s.kcal).toLocaleString()} kcal</b></td><td>${Math.round(s.hr)} bpm</td><td>${Math.round(s.hrmax)} bpm</td><td><span class="pill" style="background:${col}22;color:${col}">${s.mets} METs</span></td></tr>`;
+  });
+  tb.innerHTML = h;
+})();
+
+/* ---------- sports comparison ---------- */
+(function(){
+  const svg = document.getElementById('c-sports');
+  const W = 1000, padL = 110, padR = 130, rowH = 26, gap = 8;
+  const sp = DATA.sports.filter(s => s.h >= 0.1);
+  const max = sp[0].h;
+  const names = {Pickleball:'Pickleball', Walking:'Walking', Cricket:'Cricket', Cycling:'Cycling',
+    Other:'Other', Swimming:'Swimming', Badminton:'Badminton', Elliptical:'Elliptical',
+    Running:'Running', TableTennis:'Table Tennis', FunctionalStrengthTraining:'Strength', CardioDance:'Cardio Dance'};
+  sp.forEach((s, i) => {
+    const y = 10 + i * (rowH + gap);
+    const w = Math.max(s.h / max * (W - padL - padR), 3);
+    txt(svg, padL - 10, y + rowH/2 + 4, names[s.s] || s.s, {anchor:'end', size:12, fill: INK, weight: i===0?600:400});
+    const r = el('rect', {x: padL, y, width: w, height: rowH, rx: 7,
+      fill: i === 0 ? COURT : '#DCD8CC'}, svg);
+    hover(r, `${names[s.s]||s.s} · ${s.n} workouts · ${s.h} h · ${s.kcal.toLocaleString()} kcal`);
+    if(i === 0)
+      txt(svg, padL + w - 12, y + rowH/2 + 4, `${s.h} h · ${s.n} sessions · ${s.kcal.toLocaleString()} kcal`, {anchor:'end', size:11, fill:'#fff', weight:600});
+    else
+      txt(svg, padL + w + 10, y + rowH/2 + 4, `${s.h} h · ${s.n}x · ${s.kcal.toLocaleString()} kcal`, {anchor:'start', size:10.5, fill: MUTED});
+  });
+  txt(svg, padL, 10 + sp.length*(rowH+gap) + 14, 'Pickleball = 84% of workout hours, 93% of workout calories', {anchor:'start', size:11, fill: COURT, weight:600});
+})();
+
+/* ---------- VO2max ---------- */
+(function(){
+  const svg = document.getElementById('c-vo2');
+  const W = 1000, H = 220, padL = 40, padB = 30, padT = 14, padR = 14;
+  const vo = DATA.vo2;
+  const t0 = new Date('2023-04-01').getTime(), t1 = new Date('2026-07-01').getTime();
+  const tx = d => padL + (new Date(d).getTime() - t0) / (t1 - t0) * (W - padL - padR);
+  const yMin = 28, yMax = 42;
+  const Y = v => H - padB - (v - yMin) / (yMax - yMin) * (H - padT - padB);
+  [30, 34, 38, 42].forEach(g => {
+    el('line', {x1: padL, y1: Y(g), x2: W - padR, y2: Y(g), stroke: LINE}, svg);
+    txt(svg, padL - 6, Y(g) + 3, g, {anchor:'end', size:9.5});
+  });
+  ['2023-07-01','2024-01-01','2024-07-01','2025-01-01','2025-07-01','2026-01-01'].forEach(d => {
+    txt(svg, tx(d), H - 18, moName(d.slice(0,7)), {size:9});
+    txt(svg, tx(d), H - 6, d.slice(0,4), {size:9, weight:600, fill: INK});
+  });
+  // era shade
+  el('rect', {x: tx('2025-06-22'), y: padT - 4, width: tx('2026-06-10') - tx('2025-06-22'),
+    height: H - padT - padB + 4, fill: css('--court-soft'), opacity:.4, rx: 8}, svg);
+  txt(svg, tx('2025-06-22') + 6, padT + 7, 'PICKLEBALL ERA', {anchor:'start', size:8.5, fill: COURT, weight:600});
+  let path = '';
+  vo.forEach((p, i) => path += (i ? 'L' : 'M') + tx(p.d).toFixed(1) + ' ' + Y(p.v).toFixed(1) + ' ');
+  el('path', {d: path, fill:'none', stroke: NIGHT, 'stroke-width': 2, opacity:.5}, svg);
+  vo.forEach(p => {
+    const best = p.v >= 40.6 || (p.d >= '2025-06-22' && p.v >= 38);
+    const c = el('circle', {cx: tx(p.d), cy: Y(p.v), r: best ? 6 : 4, fill: best ? BALL : NIGHT,
+      stroke: PAPER,'stroke-width':1.2}, svg);
+    hover(c, `${p.d} · ${p.v} ml/kg/min`);
+  });
+  txt(svg, tx('2023-07-28') + 10, Y(40.65) + 4, 'all-time best 40.7 (running era)', {anchor:'start', size:10.5, fill: INK, weight:600});
+  txt(svg, tx('2025-08-05') + 10, Y(38) - 8, 'pickleball-era best 38.0', {anchor:'start', size:10.5, fill: INK, weight:600});
+})();
+
+</script>
+</body>
+</html>
