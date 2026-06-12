@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Court Time · The Pickleball Year</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FAF9F6; --surface:#FFFFFF; --ink:#171D1A; --sub:#5D6661; --faint:#9AA39D;
@@ -150,6 +151,145 @@ table.lb .crown{font-size:10px;margin-left:4px}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;font-family:'Spline Sans Mono',monospace;font-size:11.5px;padding:6px 10px;border-radius:7px;opacity:0;transition:opacity .12s;z-index:50;white-space:nowrap}
+
+/* ================= PREMIUM OVERRIDE LAYER · Court Editorial ================= */
+:root{
+  --font-ui:'Inter',system-ui,-apple-system,sans-serif;
+  --font-display:'Space Grotesk','Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono','SFMono-Regular',Consolas,monospace;
+  --background:#10231F; --background-2:#162B26; --background-3:#0D1B19;
+  --court-line:rgba(236,229,209,.105);
+  --card:#F6F0E4; --card-alt:#FCF7ED; --card-warm:#F2E7D3;
+  --ink-night:#F7F1E3; --muted-night:#B8C2B9; --ink-card:#14221E; --muted-card:#66716A; --muted-card-2:#839087;
+  --border-night:rgba(247,241,227,.14); --border-card:rgba(20,34,30,.12);
+  --sage:#7E9F72; --deep-sage:#2F6F5D; --court-teal:#2F7C69; --clay:#B56C3E; --ochre:#C9A24A;
+  --indigo:#4F6F8F; --berry:#96546C; --mint-soft:#DCE8DA; --clay-soft:#EFE0D2;
+  --bg:var(--background); --surface:var(--card); --ink:var(--ink-card); --sub:var(--muted-card); --faint:var(--muted-card-2);
+  --line:rgba(20,34,30,.14); --grid:rgba(20,34,30,.07);
+  --green:var(--sage); --green-deep:#1E4E42; --green-tint:rgba(126,159,114,.18);
+  --amber:var(--clay); --amber-tint:rgba(181,108,62,.13); --rust:var(--berry); --z4:var(--ochre); --blue:var(--indigo);
+  --easy:#A8C2A4; --nodata:rgba(20,34,30,.22);
+  --paper:var(--card); --court:var(--court-teal); --ball:var(--clay); --hot:var(--berry); --night:var(--indigo);
+  --court-soft:rgba(47,124,105,.12); --muted:var(--muted-card);
+  --r:22px;
+  --sh:0 18px 48px rgba(6,17,15,.20), 0 1px 0 rgba(255,255,255,.60) inset;
+  --sh-soft:0 10px 30px rgba(6,17,15,.12);
+}
+html{background:var(--background-3)}
+body{
+  color:var(--ink-night);
+  background:
+    radial-gradient(circle at 14% 0%, rgba(126,159,114,.16), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(181,108,62,.12), transparent 32%),
+    linear-gradient(160deg, var(--background-3) 0%, var(--background) 42%, #17312A 100%);
+  font-family:var(--font-ui);
+}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;background:
+  linear-gradient(90deg, transparent 0 9%, var(--court-line) 9.08% 9.22%, transparent 9.32% 90.5%, var(--court-line) 90.58% 90.72%, transparent 90.82%),
+  linear-gradient(0deg, transparent 0 18%, var(--court-line) 18.08% 18.22%, transparent 18.32% 77%, var(--court-line) 77.08% 77.22%, transparent 77.32%),
+  repeating-linear-gradient(135deg, rgba(255,255,255,.022) 0 1px, transparent 1px 22px);
+  z-index:-1}
+.shell{max-width:1360px;gap:56px}
+.disp,h1,.shead h2,.verdict h3{font-family:var(--font-display)}
+.mono{font-family:var(--font-mono)}
+svg text{font-family:var(--font-mono) !important}
+.card svg line{shape-rendering:crispEdges}
+
+/* night-side text */
+.hero .when{color:#D8C780}
+.hero h1{font-family:var(--font-display);color:var(--ink-night);letter-spacing:-.055em;line-height:.96}
+.hero h1 em{background:linear-gradient(90deg,#F2E0A3,#ADC492 48%,#D39A6B);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero::before{content:'PICKLEBALL DATA YEARBOOK';display:inline-flex;width:max-content;padding:8px 12px;margin-bottom:18px;border:1px solid rgba(247,241,227,.16);border-radius:999px;background:rgba(247,241,227,.075);color:#D8C780;font:700 10px/1 var(--font-mono);letter-spacing:.18em}
+.hero .lede{color:var(--muted-night)}
+.shead h2{color:var(--ink-night);font-weight:700}
+.shead .num{color:var(--ochre)}
+.slede{color:var(--muted-night)}
+.slede b{color:var(--ink-night)}
+.note{color:var(--muted-night)}
+.note b{color:var(--ink-night)}
+
+/* rail + mobile nav */
+.rail .logo{font-family:var(--font-display);color:var(--ink-night)}
+.rail .logo i{color:#D8C780}
+.rail .tag{color:var(--muted-night)}
+.rail ul{border-left-color:var(--border-night)}
+.rail a{color:rgba(247,241,227,.68);font-weight:650;border-radius:0 14px 14px 0}
+.rail a .n{color:rgba(247,241,227,.4)}
+.rail a:hover{color:var(--ink-night)}
+.rail a.on{color:#E6D8A9;border-left-color:#C8D49A;background:rgba(247,241,227,.08)}
+.rail a.on .n{color:#C8D49A}
+.rail .foot{color:rgba(247,241,227,.42)}
+.mbar{background:rgba(13,27,25,.90);border-bottom:1px solid var(--border-night);backdrop-filter:blur(16px)}
+.mbar a{background:rgba(247,241,227,.07);color:var(--ink-night);border-color:var(--border-night)}
+
+/* warm paper cards */
+.card,.kpi,.ans,.phase,.mini,.verdict{
+  background:linear-gradient(180deg,rgba(255,255,255,.54),rgba(255,255,255,.16)),var(--card);
+  border:1px solid var(--border-card);box-shadow:var(--sh);color:var(--ink-card);position:relative;overflow:hidden}
+.card::before,.kpi::before,.ans::before,.phase::before,.mini::before,.verdict::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(255,255,255,.22),transparent 34%),
+    repeating-linear-gradient(0deg,rgba(20,34,30,.018) 0 1px,transparent 1px 8px);opacity:.72}
+.card>*,.kpi>*,.ans>*,.phase>*,.mini>*,.verdict>*{position:relative}
+.card{border-radius:26px}
+.card-h h3{font-family:var(--font-display);font-weight:700;font-size:17px}
+
+/* KPIs */
+.kpi{min-height:124px;border-radius:28px;padding:20px;isolation:isolate}
+.kpi .v{font-family:var(--font-display);font-size:clamp(28px,3vw,40px);font-weight:700;line-height:.96;letter-spacing:-.035em}
+.kpi .l{color:var(--muted-card);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;margin-top:8px}
+.kpi:nth-child(1){background:linear-gradient(135deg,#D7C477,#ADC492 56%,#89A681);border-color:rgba(247,241,227,.30)}
+.kpi:nth-child(1) .l{color:#2E3C30}
+
+/* answers */
+.ans .q::before{color:#946F1B}
+.ans p{color:var(--muted-card)}
+
+/* insights as editorial scoreboard notes */
+.insight{background:linear-gradient(135deg,#18312B,#10231F);border:1px solid rgba(247,241,227,.12);color:#DDE4DB;border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.055);font-size:13.2px}
+.insight b{color:#FFF5D8}
+.insight::before{background:#D7C477;border-radius:999px}
+.insight .mono{color:#B8C2B9}
+
+/* phase cards */
+.phase{border-radius:24px;padding:21px 22px;background:linear-gradient(180deg,#FCF7ED,var(--card))}
+.phase::after{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(180deg,var(--court-teal),rgba(47,124,105,.18))}
+.phase.p2{background:linear-gradient(180deg,#FFF8ED 0%,#F6EDDD 100%);border-color:rgba(181,108,62,.24)}
+.phase.p2::after{background:linear-gradient(180deg,var(--clay),rgba(181,108,62,.16))}
+.phase .t,.phase.p2 .t,.phase .t[style]{display:inline-flex;align-items:center;max-width:100%;padding:7px 10px;margin-bottom:14px;border-radius:999px;background:rgba(47,124,105,.10);color:#275C4E !important;font-family:var(--font-mono);font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1.1;white-space:normal}
+.phase.p2 .t,.phase.p2 .t[style]{background:rgba(181,108,62,.12);color:#6A3B22 !important}
+.phase .r .v i{display:inline-flex;align-items:center;margin-left:6px;padding:2px 6px;border-radius:999px;background:rgba(150,84,108,.10);color:#804159;font-family:var(--font-ui);font-size:10.5px;font-weight:900}
+
+/* segmented controls */
+.seg{background:rgba(20,34,30,.055);border:1px solid rgba(20,34,30,.13);border-radius:999px;padding:4px}
+.seg button{font-family:var(--font-ui);font-weight:800;color:#58665F;border-radius:999px;padding:7px 13px}
+.seg button.on{background:#203E36;color:#F7F1E3;box-shadow:0 4px 14px rgba(6,17,15,.13)}
+
+/* leaderboard */
+table.lb th{font-family:var(--font-mono);color:#7A867E;font-weight:800;border-bottom-color:rgba(20,34,30,.14)}
+table.lb td{font-family:var(--font-mono);color:var(--muted-card);border-bottom-color:rgba(20,34,30,.075)}
+table.lb td:nth-child(2){font-family:var(--font-ui);font-weight:800;color:var(--ink-card)}
+table.lb td.hl{background:rgba(126,159,114,.18);color:#245344;font-weight:800}
+
+/* scoreboard finding */
+.finding{background:radial-gradient(circle at 92% 30%,rgba(215,196,119,.17),transparent 28%),linear-gradient(135deg,#18312B,#10231F 72%,#0D1B19);color:var(--ink-night);border:1px solid rgba(247,241,227,.16);border-radius:28px;box-shadow:0 22px 60px rgba(6,17,15,.25),inset 0 1px 0 rgba(255,255,255,.06)}
+.finding .big{font-family:var(--font-display);color:#E5D184}
+.finding .cap{color:#CBD6CE}
+.finding .cap b{color:#FFF3D5}
+.finding .cap .k{color:#D7C477}
+
+/* verdict + minis */
+.verdict{border-left:4px solid var(--ochre)}
+.verdict p{color:var(--muted-card)}
+.verdict p b{color:var(--ink-card)}
+.mini .tag{color:#946F1B}
+
+/* tooltip */
+.tip{background:#10231F;color:#F7F1E3;border:1px solid rgba(247,241,227,.22);font-family:var(--font-mono)}
+
+@media(max-width:1080px){.shell{padding:0 18px}}
+@media(max-width:900px){.phase .t,.phase.p2 .t{font-size:9.5px;letter-spacing:.09em}}
+
 </style>
 </head>
 <body>
@@ -434,9 +574,15 @@ function txt(parent, x, y, s, opts={}){
 function hover(e, label){
   e.addEventListener('mousemove', ev => {
     tip.textContent = label;
-    tip.style.left = (ev.clientX + 12) + 'px';
-    tip.style.top = (ev.clientY - 30) + 'px';
     tip.style.opacity = 1;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = ev.clientX + 12, y = ev.clientY - h - 10;
+    if(x + w > window.innerWidth - 8) x = ev.clientX - w - 12;
+    if(x < 8) x = 8;
+    if(y < 8) y = ev.clientY + 16;
+    if(y + h > window.innerHeight - 8) y = window.innerHeight - h - 8;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
   });
   e.addEventListener('mouseleave', () => tip.style.opacity = 0);
 }
@@ -1136,7 +1282,7 @@ document.querySelectorAll('#zseg button').forEach(b => b.addEventListener('click
   el('circle', {cx: tx(a.d), cy: Y(a.v), r: 5, fill: COURT, stroke: PAPER, 'stroke-width': 1.5}, svg);
   el('circle', {cx: tx(z.d), cy: Y(z.v), r: 5, fill: HOT, stroke: PAPER, 'stroke-width': 1.5}, svg);
   txt(svg, tx(a.d) + 8, Y(a.v) - 12, 'start ' + a.v.toFixed(1), {anchor:'start', size:12, weight:600, fill: COURT});
-  txt(svg, tx(z.d) + 12, Y(z.v) + 4, 'now ' + z.v.toFixed(1), {anchor:'start', size:13, weight:600, fill: HOT});
+  txt(svg, tx(z.d) + 12, Y(z.v) + 4, 'trend now ' + z.v.toFixed(1), {anchor:'start', size:13, weight:600, fill: HOT});
   txt(svg, tx(z.d) + 12, Y(z.v) + 18, '+' + Math.round((z.v/a.v - 1)*100) + '% vs start', {anchor:'start', size:10, fill: MUTED});
 })();
 
